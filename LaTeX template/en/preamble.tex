@@ -1,0 +1,79 @@
+% LaTeX template, preamble file
+% --------------------------------------------------------------------------------------------------
+%
+% This is the preamble file for the project, in which package dependencies and
+% custom commands should be defined.
+
+
+% Base packages ------------------------------------------------------------------------------------
+
+\usepackage[T1]{fontenc}     % font encoding, adds support for printing accented characters
+\usepackage[utf8]{inputenc}  % input incoding, adds support for inputting accented characters
+\usepackage[english]{babel}  % set document language
+\usepackage[square]{natbib}  % set citation style to use square brackets
+\usepackage{hyperref}        % insert clickable hyperlinks
+\usepackage{lastpage}        % reference last page (used to count numbered pages)
+
+
+% Math packages ------------------------------------------------------------------------------------
+
+\usepackage{mathtools}  % math commands and environments
+\usepackage{amssymb}    % additional math symbols
+\usepackage{amsthm}     % theorem environments
+\usepackage{bbm}        % improved 'blackboard bold' styling
+
+
+% Figure packages ----------------------------------------------------------------------------------
+
+\usepackage[dvipsnames]{xcolor}  % font colouring functionality
+\usepackage{graphicx}            % handling of images
+\usepackage{booktabs}            % improved tables
+\usepackage{tikz}                % drawing vector graphics
+\usepackage{algpseudocode}       % pseudocode listings
+\usepackage{listings}            % source code listings
+
+
+% Styling packages ---------------------------------------------------------------------------------
+
+\usepackage{microtype}             % improve full justification and font kerning
+\usepackage{emptypage}             % suppress page numbering on empty pages
+\usepackage{fancyhdr}              % easy customisation of headers and footers
+\usepackage{titlesec}              % easy customisation of section titles
+\usepackage[margin=3cm]{geometry}  % adjust page margins
+
+
+% Customisations -----------------------------------------------------------------------------------
+
+% Theorem enviroments
+\theoremstyle{plain}
+\newtheorem{thm}{Sætning}[section]
+\newtheorem{lem}[thm]{Lemma}
+\newtheorem{prop}[thm]{Proposition}
+\newtheorem*{cor}{Korrolar}
+
+\theoremstyle{definition}
+\newtheorem{defn}[thm]{Definition}
+\newtheorem{exmp}[thm]{Eksempel}
+
+% Sets
+\newcommand{\N}{\mathbb{N}}  % natural numbers
+\newcommand{\Z}{\mathbb{Z}}  % integers
+\newcommand{\R}{\mathbb{R}}  % real numbers
+\newcommand{\C}{\mathbb{C}}  % complex numbers
+
+% Other operators and concepts
+\newcommand{\1}{\mathbbm{1}}     % indicator function
+\newcommand{\bigO}{\mathcal{O}}  % big O
+
+% Headers and footers
+\fancyhead{}                  % clear default header fields
+\fancyhead[LE,RO]{Group XYZ}  % left on even, right on odd
+\fancyhead[RE]{\leftmark}     % chapter name
+\fancyhead[LO]{\rightmark}    % sections name
+\fancyfoot{}                  % clear default footer fields
+\fancyfoot[CE,CO]{\thepage}   % centered page numbers
+\pagestyle{fancy}             % activate fancy style
+
+% Chapter titles
+% http://mirrors.dotsrc.org/ctan/macros/latex/contrib/titlesec/titlesec.pdf
+\titleformat{\chapter}[hang]{\Huge\bfseries}{\thechapter\enspace\textcolor{BrickRed}{|}\enspace}{0pt}{\Huge\bfseries}
