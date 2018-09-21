@@ -1,0 +1,55 @@
+% LaTeX template, example input file
+% --------------------------------------------------------------------------------------------------
+
+\chapter{Second Example}
+\label{ch:second-example}
+
+Here is another example, citing \citep{rosen} and \citep{edpenn}.
+When you cite a resource, that resource is automatically added to the literature list, and in the PDF file the citations become clickable links pointing to that list.
+
+
+\section{Custom Environments and Commands}
+\label{sec:custom}
+
+While \LaTeX{} provides commands for many different purposes, you will often find yourself defining your own.
+For this template, I have included some examples of custom environments and commands in the preamble (\texttt{premable.tex}).
+
+Such commands can save you a lot of typing when working on a long, modular document such as a semester project.
+For instance, instead of typing \verb!\mathbb{N}! every time you want the symbol for the set of natural numbers, define a shorter command, like \verb!\N!.
+The syntax for defining commands is as follows:
+%
+\begin{verbatim}
+\newcommand{name}[num]{definition}
+\end{verbatim}
+%
+where \texttt{name} is the command name, e.g. \verb!\N!, \texttt{num} is the number of arguments the command takes (omit the square brackets if the command takes no arguments), and \texttt{definition} is the output of the command, e.g. \verb!\mathbb{N}!.
+
+
+\subsection{Definitions, Theorems, Proofs}
+\label{sec:thms}
+
+In a mathematics project, you are going to be including mathematical definitions, propositions, lemmas, theorems, etc.
+The \texttt{amsthm} package provides a simple way to define such environments:
+%
+\begin{verbatim}
+\newtheorem{name}{Printed output}[numberby]
+\end{verbatim}
+%
+A few examples are included in the preamble.
+See \url{https://en.wikibooks.org/wiki/LaTeX/Theorems} for more information.
+
+\begin{thm}[Example of Theorem]
+  \(\sqrt{2}\) is irrational.
+\end{thm}
+%
+\begin{proof}
+  Suppose \(\sqrt{2} \in \Q\) and let \(k = \min\{\, N \in \N : N\sqrt{2} \in \N \,\}\).
+  But then \(k (\sqrt{2} - 1) = k\sqrt{2} - k \in \N\), and \(k(\sqrt{2} - 1) < k\), which is a contradiction.
+  Therefore, \(\sqrt{2} \notin \Q\).
+\end{proof}
+
+
+\subsection{Source and Pseudocode}
+\label{sec:code}
+
+WIP...

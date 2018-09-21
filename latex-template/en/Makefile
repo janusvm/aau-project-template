@@ -8,7 +8,7 @@ INPUT := $(shell find incl/ fig/ -type f ! -name '*.aux')
 # --------------------------------------------------------------------------------------------------
 
 $(MASTER).pdf: $(MASTER).tex $(INPUT) $(PREAMBLE)
-	latexmk -pdf -quiet -bibtex $(MASTER)
+	latexmk -pdf -quiet $(MASTER)
 
 master: $(MASTER).pdf
 clean:
