@@ -12,6 +12,6 @@ $(MASTER).pdf: $(MASTER).tex $(INPUT) $(PREAMBLE)
 
 master: $(MASTER).pdf
 clean:
-	latexmk -bibtex -C
+	latexmk -bibtex -c
 
 .PHONY: master clean

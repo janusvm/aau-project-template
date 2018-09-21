@@ -16,15 +16,17 @@ With the environment \texttt{lstlisting} you can type code directly, but most of
 Some notable options for this command are:
 %
 \begin{description}
-\item[caption] Sets the listing caption
-\item[label] Sets the listing label
-\item[language] Sets the language for the syntax highlighter locally
-\item[style] Sets the highlighter style locally
+\item[caption] sets the listing caption
+\item[label] sets the listing label
+\item[language] sets the language for the syntax highlighter locally
+\item[style] sets the highlighter style locally
+\item[firstline] starts the listing at the specified line number
+\item[lastline] ends the listing at the specified line number
 \end{description}
 %
 In the preamble, you can also set options globally with \verb!\lstset!.
 For example, if all your source code is in Python, you might put \verb!\lstset{language=Python}!.
 
-\lstinputlisting[caption=Bubble Sort in Python,label=py:bubble]{py/bubblesort.py}
+\lstinputlisting[firstline=5,caption=Bubble Sort in Python,label=py:bubble]{py/bubblesort.py}
 
 For more information, see \url{https://en.wikibooks.org/wiki/LaTeX/Source_Code_Listings}.

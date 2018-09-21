@@ -16,21 +16,6 @@ To include pseudocode in your project, use the \texttt{algorithmic} environment 
 \end{algorithm}
 \end{verbatim}
 
-\begin{algorithm}
-  \begin{algorithmic}
-    \Procedure{bubblesort}{\,\(a_{1}, \dotsc, a_{n}\) : real numbers with \(n \geq 2\)\,}
-    \For{\(i \coloneqq 1\) to \(n - 1\)}
-    \For{\(j \coloneqq 1\) to \(n - i\)}
-    \If{\(a_{j} > a_{j+1}\)}
-    interchange \(a_{j}\) and \(a_{j+1}\)
-    \EndIf
-    \EndFor
-    \EndFor
-    \EndProcedure
-    \Comment{\(a_{1}, \dotsc, a_{n}\) are now in increasing order}
-  \end{algorithmic}
-  \caption{Bubble Sort}
-  \label{alg:some}
-\end{algorithm}
+\input{fig/alg/bubblesort}
 
 See \url{https://en.wikibooks.org/wiki/LaTeX/Algorithms#Typesetting_using_the_algorithmicx_package} for a quick reference of the syntax.
