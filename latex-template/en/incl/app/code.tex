@@ -1,0 +1,30 @@
+% LaTeX template, example appendix file
+% --------------------------------------------------------------------------------------------------
+
+\chapter{Python Source Code}
+\label{app:code}
+
+If you implement algorithms in specific programming languages, you might want to include the source code in an appendix like this one.
+The package \texttt{listings} provides funtionality for including syntax highlighted source code for many different languages.
+
+With the environment \texttt{lstlisting} you can type code directly, but most often you will probably need the \verb!\lstinputlisting! command, which lets you input the code from a source file, i.e.
+%
+\begin{verbatim}
+\lstinputlisting[options]{path/to/source_file}
+\end{verbatim}
+%
+Some notable options for this command are:
+%
+\begin{description}
+\item[caption] Sets the listing caption
+\item[label] Sets the listing label
+\item[language] Sets the language for the syntax highlighter locally
+\item[style] Sets the highlighter style locally
+\end{description}
+%
+In the preamble, you can also set options globally with \verb!\lstset!.
+For example, if all your source code is in Python, you might put \verb!\lstset{language=Python}!.
+
+\lstinputlisting[caption=Bubble Sort in Python,label=py:bubble]{py/bubblesort.py}
+
+For more information, see \url{https://en.wikibooks.org/wiki/LaTeX/Source_Code_Listings}.

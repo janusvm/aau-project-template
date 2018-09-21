@@ -1,6 +1,5 @@
 % LaTeX template, preamble file
 % --------------------------------------------------------------------------------------------------
-%
 % This is the preamble file for the project, in which package dependencies and
 % custom commands should be defined.
 
@@ -25,12 +24,13 @@
 
 % Figure packages ----------------------------------------------------------------------------------
 
-\usepackage[dvipsnames]{xcolor}  % font colouring functionality
-\usepackage{graphicx}            % handling of images
-\usepackage{booktabs}            % improved tables
-\usepackage{tikz}                % drawing vector graphics
-\usepackage{algpseudocode}       % pseudocode listings
-\usepackage{listings}            % source code listings
+\usepackage[dvipsnames]{xcolor}    % font colouring functionality
+\usepackage{graphicx}              % handling of images
+\usepackage{booktabs}              % improved tables
+\usepackage{tikz}                  % drawing vector graphics
+\usepackage{algorithm}             % algorithm floats
+\usepackage[noend]{algpseudocode}  % pseudocode listings
+\usepackage{listings}              % source code listings
 
 
 % Styling packages ---------------------------------------------------------------------------------
@@ -40,6 +40,7 @@
 \usepackage{fancyhdr}              % easy customisation of headers and footers
 \usepackage{titlesec}              % easy customisation of section titles
 \usepackage[margin=3cm]{geometry}  % adjust page margins
+\usepackage[toc,page]{appendix}    % Improved appendix control
 
 
 % Customisations -----------------------------------------------------------------------------------
@@ -67,14 +68,32 @@
 \newcommand{\bigO}{\mathcal{O}}  % big O
 
 % Headers and footers
-\fancyhead{}                  % clear default header fields
-\fancyhead[LE,RO]{Group XYZ}  % left on even, right on odd
-\fancyhead[RE]{\leftmark}     % chapter name
-\fancyhead[LO]{\rightmark}    % sections name
-\fancyfoot{}                  % clear default footer fields
-\fancyfoot[CE,CO]{\thepage}   % centered page numbers
-\pagestyle{fancy}             % activate fancy style
+\fancyhead{}                      % clear default header fields
+\fancyhead[LE,RO]{\projectgroup}  % left on even, right on odd
+\fancyhead[RE]{\leftmark}         % chapter name
+\fancyhead[LO]{\rightmark}        % sections name
+\fancyfoot{}                      % clear default footer fields
+\fancyfoot[CE,CO]{\thepage}       % centered page numbers
+\pagestyle{fancy}                 % activate fancy style
 
 % Chapter titles
 % http://mirrors.dotsrc.org/ctan/macros/latex/contrib/titlesec/titlesec.pdf
 \titleformat{\chapter}[hang]{\Huge\bfseries}{\thechapter\enspace\textcolor{BrickRed}{|}\enspace}{0pt}{\Huge\bfseries}
+
+% Predefined TikZ node styles
+\tikzstyle{point} = [fill,shape=circle,minimum size=3pt,inner sep=0pt]
+\tikzstyle{edge} = [fill=white,midway,inner sep=1pt]
+
+% Listing style
+\lstdefinestyle{custompy}{
+  belowcaptionskip=\baselineskip,
+  breaklines=true,
+  language=Python,
+  showstringspaces=false,
+  basicstyle=\small\ttfamily,
+  keywordstyle=\bfseries\color{green!40!black},
+  commentstyle=\itshape\color{purple!40!black},
+  identifierstyle=\color{blue},
+  stringstyle=\color{orange},
+}
+\lstset{language=Python,style=custompy,captionpos=b}

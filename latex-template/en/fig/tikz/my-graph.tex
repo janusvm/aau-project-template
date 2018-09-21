@@ -1,0 +1,37 @@
+% LaTeX template, example tikzpicture input file
+% --------------------------------------------------------------------------------------------------
+% This file contains all the code involved in inputting a single TikZ figure.  While this code can
+% just as well be inserted directly into the documents with the body text, I like to keep my
+% projects as modular as possible.
+
+
+\begin{figure}[htbp]
+  \centering
+
+  \begin{tikzpicture}
+
+    % Nodes
+    \node[point] at (0,1) (a) [label=left:\(a\)] {};
+    \node[point] at (1,2) (b) [label=above:\(b\)] {};
+    \node[point] at (1,0) (c) [label=below:\(c\)] {};
+    \node[point] at (3,2) (d) [label=above:\(d\)] {};
+    \node[point] at (3,0) (e) [label=below:\(e\)] {};
+    \node[point] at (4,1) (z) [label=right:\(z\)] {};
+
+    % Edges
+    \footnotesize
+    \draw (a) -- (b) node[edge] {4};
+    \draw (a) -- (c) node[edge] {2};
+    \draw (b) -- (c) node[edge] {1};
+    \draw (b) -- (d) node[edge] {5};
+    \draw (c) -- (d) node[edge] {8};
+    \draw (c) -- (e) node[edge] {10};
+    \draw (d) -- (e) node[edge] {2};
+    \draw (d) -- (z) node[edge] {6};
+    \draw (e) -- (z) node[edge] {3};
+    
+  \end{tikzpicture}
+
+  \caption{Example graph from \citep{rosen}.}
+  \label{fig:graph}
+\end{figure}

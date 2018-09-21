@@ -137,12 +137,12 @@ The numbered version has a seperate number for each line.
 
 For rendering inline math, e.g. \(\cos^{2}\theta + \sin^{2}\theta = 1\), use \verb!\(...\)!.
 Alternatively, you can also use \verb!$...$!, but \verb!\(...\)! has improved spacing and error messages.
-
+%
 See \url{https://en.wikibooks.org/wiki/LaTeX/Mathematics} for a good reference of symbols and commands.
 
 
-\subsection{Floats}
-\label{sec:floats}
+\subsection{Figures}
+\label{sec:figures}
 
 Figures in \LaTeX{} are input as so-called \emph{floats} using the \texttt{figure} environment.
 A floating object cannot be broken over a page, so the figure will be repositioned depending on the available space on the page.
@@ -162,7 +162,27 @@ The \verb!\centering! command is there to center the image.
 Among the options available for \verb!\includegraphics!, the most important one for you will probably be \texttt{width}.
 To make the image take up half the page (within margins), use \verb!width=0.5\textwidth!.
 All figures should have a caption, which is set with the \verb!\caption! command, and the \verb!\label! lets us reference it (for example, \verb!Figure \ref{fig:me}! becomes Figure \ref{fig:me}).
+For more info, see \url{https://en.wikibooks.org/wiki/LaTeX/Floats,_Figures_and_Captions}.
 
 \input{fig/img/me}
 
-For more info, see \url{https://en.wikibooks.org/wiki/LaTeX/Floats,_Figures_and_Captions}.
+Figures need not necessarily consist of images like JPG, PNG, or PDF files, but can also consist of \LaTeX{} code.
+An important example of this is \emph{TikZ}, a native vector graphics framework in \LaTeX{}.
+A TikZ picture is enclosed in the environment \texttt{tikzpicture}, which can be enclosed in a \texttt{figure} environment, just like images:
+%
+\begin{verbatim}
+\begin{figure}[placement]
+  \centering
+  \begin{tikzpicture}
+    % tikz code goes here ...
+  \end{tikzpicture}
+  \caption{The figure caption}
+  \label{fig:label}
+\end{figure}
+\end{verbatim}
+%
+An example of a graph drawn with TikZ code is shown on Figure \ref{fig:graph}.
+
+\input{fig/tikz/my-graph}
+
+To learn TikZ syntax, see \citep{minimaltikz}, the tutorial sections of \citep{tikzmanual}, and \url{https://en.wikibooks.org/wiki/LaTeX/PGF/TikZ}.

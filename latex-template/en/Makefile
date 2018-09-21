@@ -3,7 +3,7 @@
 
 MASTER = master
 PREAMBLE = preamble.tex
-INPUT := $(shell find incl/ fig/ -type f ! -name '*.aux')
+INPUT := $(shell find incl/ fig/ py/ -type f ! -name '*.aux')
 
 # --------------------------------------------------------------------------------------------------
 

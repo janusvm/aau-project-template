@@ -18,6 +18,19 @@
 % to A4, the layout to two-sided, and starts new chapters on a right page.
 \documentclass[11pt,a4paper,twoside,openright]{book}
 
+% Some top level variables that are used to automatically input title, authors, etc. in various
+% places. For more fine tuning, edit each use of the variables manually.
+\def \projecttitle       {\LaTeX{} Template}
+\def \projectsubtitle    {A Helping Hand For Getting Started}
+\def \projectdegree      {Mathematics-Economics}
+\def \projectsemester    {1}
+\def \projectsupervisors {Janus S. Valberg-Madsen}
+\def \projectgroup       {Group XYZ}
+\def \projectauthors     {
+  Nova B. Valberg-Madsen\\
+  Line B. Olsen
+}
+
 % The bundled 'macros' file defines commands for creating an AAU style title
 % page (this would usually go in the preamble, but since these macros are
 % authored by someone else, I have kept them seperate from mine).
@@ -49,6 +62,12 @@
 % The \include command forces a page break and inserts the contents of the input file.
 \include{incl/main/example1}
 \include{incl/main/example2}
+
+% Appendices
+\begin{appendices}
+  \include{incl/app/pseudo}
+  \include{incl/app/code}
+\end{appendices}
 
 % The backmatter is for extra stuff. Headings are not numbered.
 \backmatter

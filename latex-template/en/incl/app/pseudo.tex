@@ -1,0 +1,36 @@
+% LaTeX template, example appendix file
+% -------------------------------------------------------------------------------------------------
+
+\chapter{Pseudocode}
+\label{app:pseudocode}
+
+To include pseudocode in your project, use the \texttt{algorithmic} environment (place inside an \texttt{algorithm} environment for figure-like floating):
+%
+\begin{verbatim}
+\begin{algorithm}
+  \begin{algorithmic}
+    % pseudocode here...
+  \end{algorithmic}
+  \caption{algorithm title}
+  \label{alg:label}
+\end{algorithm}
+\end{verbatim}
+
+\begin{algorithm}
+  \begin{algorithmic}
+    \Procedure{bubblesort}{\,\(a_{1}, \dotsc, a_{n}\) : real numbers with \(n \geq 2\)\,}
+    \For{\(i \coloneqq 1\) to \(n - 1\)}
+    \For{\(j \coloneqq 1\) to \(n - i\)}
+    \If{\(a_{j} > a_{j+1}\)}
+    interchange \(a_{j}\) and \(a_{j+1}\)
+    \EndIf
+    \EndFor
+    \EndFor
+    \EndProcedure
+    \Comment{\(a_{1}, \dotsc, a_{n}\) are now in increasing order}
+  \end{algorithmic}
+  \caption{Bubble Sort}
+  \label{alg:some}
+\end{algorithm}
+
+See \url{https://en.wikibooks.org/wiki/LaTeX/Algorithms#Typesetting_using_the_algorithmicx_package} for a quick reference of the syntax.
