@@ -1,8 +1,9 @@
 # LaTeX template
 
 In these folders are LaTeX templates in Danish and English, respectively.
+The project structure is my subjective suggestion for how to organise a LaTeX project, but feel free to adapt it to your own liking.
 
-The file structure used in these templates is as follows:
+The directory and file structure used in these templates is as follows:
 
 ```
 .

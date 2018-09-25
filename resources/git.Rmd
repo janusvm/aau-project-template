@@ -1,0 +1,9 @@
+---
+title: "Quick guide to git and GitHub"
+author: "Janus S. Valberg-Madsen"
+output: pdf_document
+header-includes:
+  \usepackage{fourier}
+  \usepackage{inconsolata}
+fontsize: 12pt
+---
