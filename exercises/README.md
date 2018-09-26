@@ -12,9 +12,12 @@ For each of the basic exercises, create a `.tex` file named `ex_j.tex` for the j
 
 In the file `exercises.tex` add the file with the command `\input`.
 
-1. Typeset the following:
+1. Typeset the following (hint: inline math):
 
 ![](img/math-inline-1.svg)
 
+2. Typeset the equation with the `equation` environment:
+
+![](img/math-display-1.svg)
 
 ## (Optional) Advanced topics
