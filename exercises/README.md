@@ -7,15 +7,17 @@ Otherwise, googling "latex topic" is the way to go (e.g. "latex insert matrix").
 A helpful resource for typesetting math, if you don't know the syntax is: <http://www.codecogs.com/latex/eqneditor.php>  
 It lets you point and click to insert symbols and generate the code for you.
 
+
 ## Basics 
 
-For each of the basic exercises, create a `.tex` file named `ex_j.tex` for the j'th exercise and as the first line put
+For each of the basic exercises, create a file named `ex_j.tex` for the j'th exercise and as its first line put
 
 ```tex
 \subsection*{Exercise j}
 ```
 
-In the file `exercises.tex` add the file with the command `\input`, and build `exercises.pdf` with `pdflatex`.
+Then, in the file `exercises.tex` add the file with the command `\input`, and build `exercises.pdf` with `pdflatex`.
+In other words, `exercises.tex` is the master file, and each exercise has its own input file.
 
 1. Typeset the following (hint: `\(...\)`):
 
