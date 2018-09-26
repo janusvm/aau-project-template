@@ -2,7 +2,7 @@
 
 Most topics are covered by this page: <https://en.wikibooks.org/wiki/LaTeX>
 
-Otherwise, googling "latex <topic>" is the way to go (e.g. "latex insert matrix").
+Otherwise, googling "latex topic" is the way to go (e.g. "latex insert matrix").
 
 A helpful resource for typesetting math, if you don't know the syntax is: <http://www.codecogs.com/latex/eqneditor.php>  
 It lets you point and click to insert symbols and generate the code for you.
