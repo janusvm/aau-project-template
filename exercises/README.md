@@ -39,8 +39,6 @@ In the file `exercises.tex` add the file with the command `\input`, and build `e
 
 6. Insert the image `thinking-face.png` located in this folder as a figure (hint: `figure` environment and `\includegraphics{path/to/image.png}`)
 
-![](img/figure.svg)
-
 7. Typeset the following table (hint: <http://www.tablesgenerator.com/>):
 
 ![](img/tab.svg)
