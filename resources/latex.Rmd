@@ -6,6 +6,7 @@ header-includes:
   \usepackage{fourier}
   \usepackage{inconsolata}
 fontsize: 12pt
+urlcolor: red
 ---
 
 According to its project website,
