@@ -1,20 +1,20 @@
 % LaTeX template, preamble file
-% --------------------------------------------------------------------------------------------------
+% ------------------------------------------------------------------------------
 % This is the preamble file for the project, in which package dependencies and
 % custom commands should be defined.
 
 
-% Base packages ------------------------------------------------------------------------------------
+% Base packages ----------------------------------------------------------------
 
-\usepackage[T1]{fontenc}     % font encoding, adds support for printing accented characters
-\usepackage[utf8]{inputenc}  % input incoding, adds support for inputting accented characters
+\usepackage[T1]{fontenc}     % adds support for printing accented characters
+\usepackage[utf8]{inputenc}  % adds support for inputting accented characters
 \usepackage[english]{babel}  % set document language
 \usepackage[square]{natbib}  % set citation style to use square brackets
 \usepackage{hyperref}        % insert clickable hyperlinks
 \usepackage{lastpage}        % reference last page (used to count numbered pages)
 
 
-% Math packages ------------------------------------------------------------------------------------
+% Math packages ----------------------------------------------------------------
 
 \usepackage{mathtools}  % math commands and environments
 \usepackage{amssymb}    % additional math symbols
@@ -22,7 +22,7 @@
 \usepackage{bbm}        % improved 'blackboard bold' styling
 
 
-% Figure packages ----------------------------------------------------------------------------------
+% Figure packages --------------------------------------------------------------
 
 \usepackage[dvipsnames]{xcolor}    % font colouring functionality
 \usepackage{graphicx}              % handling of images
@@ -33,7 +33,7 @@
 \usepackage{listings}              % source code listings
 
 
-% Styling packages ---------------------------------------------------------------------------------
+% Styling packages -------------------------------------------------------------
 
 \usepackage{microtype}             % improve full justification and font kerning
 \usepackage{emptypage}             % suppress page numbering on empty pages
@@ -43,18 +43,19 @@
 \usepackage[toc,page]{appendix}    % improved appendix control
 
 
-% Font packages ------------------------------------------------------------------------------------
-% With pdflatex, fonts are limited to those provided in packages (as opposed to xelatex or lualatex,
-% which can use system fonts).  The typeface is changed by simply importing the package for it.
+% Font packages ----------------------------------------------------------------
+% With pdflatex, fonts are limited to those provided in packages (as opposed to
+% xelatex or lualatex, which can use system fonts).  The typeface is changed by
+% simply importing the package for it.
 %
 % See
-% * http://www.tug.org/pracjourn/2006-1/hartke/hartke.pdf for a handy list of typefaces, or 
-% * http://www.tug.dk/FontCatalogue/ for a full list of available font packages
+% * http://www.tug.org/pracjourn/2006-1/hartke/hartke.pdf
+% * http://www.tug.dk/FontCatalogue/
 
 \usepackage{lmodern}  % improved default font
 
 
-% Customisations -----------------------------------------------------------------------------------
+% Customisations ---------------------------------------------------------------
 
 % Theorem enviroments
 \theoremstyle{plain}
@@ -89,7 +90,13 @@
 
 % Chapter titles
 % http://mirrors.dotsrc.org/ctan/macros/latex/contrib/titlesec/titlesec.pdf
-\titleformat{\chapter}[hang]{\Huge\bfseries}{\thechapter\enspace\textcolor{BrickRed}{|}\enspace}{0pt}{\Huge\bfseries}
+\titleformat
+{\chapter}
+[hang]
+{\Huge\bfseries}
+{\thechapter\enspace\textcolor{BrickRed}{|}\enspace}
+{0pt}
+{\Huge\bfseries}
 
 % Predefined TikZ node styles
 \tikzstyle{point} = [fill,shape=circle,minimum size=3pt,inner sep=0pt]

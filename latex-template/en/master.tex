@@ -1,24 +1,20 @@
 % LaTeX template, master file
-% --------------------------------------------------------------------------------------------------
-% This is the main file in the project, which collects the contents from all the input files (text,
-% images, literature databases, etc.).
-%
-% In order to compile it to a PDF file, run the following command from the command line:
-%
-%     latexmk -pdf -quiet master
-%
-% --------------------------------------------------------------------------------------------------
+% ------------------------------------------------------------------------------
+% This is the main file in the project, which collects the contents from all the
+% input files (text, images, literature databases, etc.).
 
 
 % The 'book' class is the document class with the most flexible options.
 % See https://tex.stackexchange.com/a/36989/118167
 %
-% The additional options given in the square brackets set the base font size to 11pt, the paper size
-% to A4, the layout to two-sided, and starts new chapters on a right page.
+% The additional options given in the square brackets set the base font size to
+% 11pt, the paper size to A4, the layout to two-sided, and starts new chapters
+% on a right page.
 \documentclass[11pt,a4paper,twoside,openright]{book}
 
-% Some top level variables that are used to automatically input title, authors, etc. in various
-% places. For more fine tuning, edit each use of the variables manually.
+% Some top level variables that are used to automatically input title, authors,
+% etc. in various places. For more fine tuning, edit each use of the variables
+% manually.
 \def \projecttitle       {\LaTeX{} Template}
 \def \projectsubtitle    {A Helping Hand For Getting Started}
 \def \projectdegree      {Mathematics-Economics}
@@ -35,18 +31,18 @@
 % authored by someone else, I have kept them seperate from mine).
 \input{incl/misc/macros}
 
-% The 'preamble' is all the stuff that goes before actual document contents. The \input command is
-% equivalent to copying and pasting the contents from the file into the point where the command is
-% called.
+% The 'preamble' is all the stuff that goes before actual document contents. The
+% \input command is equivalent to copying and pasting the contents from the file
+% into the point where the command is called.
 \input{preamble}
 
-% All contents of the document go between the \begin and \end commands for the 'document'
-% environment.
+% All contents of the document go between the \begin and \end commands for the
+% 'document' environment.
 \begin{document}
 
-% The front matter is not counted in the numbered pages and are instead numbered with roman
-% numerals. This consists of, for example, the front page, title page, preface, and table of
-% contents.
+% The front matter is not counted in the numbered pages and are instead numbered
+% with roman numerals. This consists of, for example, the front page, title
+% page, preface, and table of contents.
 \frontmatter
 \include{incl/misc/frontpage}
 \include{incl/misc/titlepage}
@@ -54,11 +50,13 @@
 % Automatic table of contents based on the heading structure of the input files.
 \tableofcontents
 
-% The main matter is were the bulk of your work goes. Pages and headings have arabic numbers.
+% The main matter is were the bulk of your work goes. Pages and headings have
+% arabic numbers.
 \mainmatter
 
-% Input files should be partitioned such that each file corresponds to one chapter.
-% The \include command forces a page break and inserts the contents of the input file.
+% Input files should be partitioned such that each file corresponds to one
+% chapter.  The \include command forces a page break and inserts the contents of
+% the input file.
 \include{incl/main/example1}
 \include{incl/main/example2}
 
@@ -75,8 +73,8 @@
 \listoffigures
 \listoftables
 
-% Automatic list of references, based on which references in the literature database file were
-% referenced throughout the document.
+% Automatic list of references, based on which references in the literature
+% database file were referenced throughout the document.
 \bibliographystyle{apalike}
 \bibliography{incl/bib/bibliography}
 
