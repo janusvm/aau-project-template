@@ -186,3 +186,27 @@ An example of a graph drawn with TikZ code is shown on Figure \ref{fig:graph}.
 \input{fig/tikz/my-graph}
 
 To learn TikZ syntax, see \citep{minimaltikz}, the tutorial sections of \citep{tikzmanual}, and \url{https://en.wikibooks.org/wiki/LaTeX/PGF/TikZ}.
+
+
+\subsection{Tables}
+\label{sec:tables}
+
+Like with figures, tables are also input as floats, using the \texttt{table} environment.
+The actual contents of a table is placed in a \texttt{tabular} environment, where columns are seperated by a \verb!&!, and rows are seperated by a \verb!\\!:
+
+\begin{verbatim}
+  \begin{table}[placement]
+    \begin{tabular}{columns}
+      % table code goes here...
+    \end{tabular}
+    \caption{The table caption}
+    \label{tab:label}
+  \end{table}
+\end{verbatim}
+
+The \texttt{placement} argument is the same as for figures.
+The \texttt{columns} argument is a specification of the columns and consists in its most basic form of the letters \texttt{l}, \texttt{c}, and/or \texttt{r}, optionally interspersed with \verb!|! where you want vertical lines.
+For example, having \verb!\begin{tabular}{r|cc}! would tell \LaTeX{} that the table has three columns, the first of which is \textbf{r}ight aligned, followed by a vertical line, and then two \textbf{c}enter aligned columns with no divider between them.
+
+For a complete example of a table, see the source code for Table \ref{tab:my-table} (located in \verb!fig/tab/my-table.tex!).
+For more information and advanced column options, see \url{https://en.wikibooks.org/wiki/LaTeX/Tables}.
