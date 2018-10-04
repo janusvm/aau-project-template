@@ -1,14 +1,13 @@
-% LaTeX template, example pseudocode input file
+% LaTeX skabelon, eksempel på inputfil med pseudokode
 % ------------------------------------------------------------------------------
-% This file contains all the code involved in inputting a single pseudocode
-% listing.  While this code can just as well be inserted directly into the
-% documents with the body text, I like to keep my projects as modular as
-% possible.
+% Denne fil indeholder al LaTeX-kode, der skal bruges til at indsætte en enkel
+% pseudokode-blok.  Bemærk at denne kode godt kan indsættes direkte i
+% hovedfilerne, men jeg kan godt lige at opdele mit indhold i flere filer.
 
 
 \begin{algorithm}[htbp]
   \begin{algorithmic}
-    \Procedure{bubblesort}{\,\(a_{1}, \dotsc, a_{n}\) : real numbers with \(n \geq 2\)\,}
+    \Procedure{bubblesort}{\,\(a_{1}, \dotsc, a_{n}\) : reelle tal med \(n \geq 2\)\,}
     \For{\(i \coloneqq 1\) to \(n - 1\)}
     \For{\(j \coloneqq 1\) to \(n - i\)}
     \If{\(a_{j} > a_{j+1}\)}
@@ -17,7 +16,7 @@
     \EndFor
     \EndFor
     \EndProcedure
-    \Comment{\(a_{1}, \dotsc, a_{n}\) are now in increasing order}
+    \Comment{\(a_{1}, \dotsc, a_{n}\) er nu i voksende orden}
   \end{algorithmic}
   \caption{Bubble Sort}
   \label{alg:some}

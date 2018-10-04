@@ -1,26 +1,26 @@
-% LaTeX template, example table input file
+% LaTeX skabelon, eksempel på inputfil med en tabel
 % ------------------------------------------------------------------------------
-% This file contains all the code involved in inputting a single table.  While
-% this code can just as well be inserted directly into the documents with the
-% body text, I like to keep my projects as modular as possible.
+% Denne fil indeholder LaTeX-kode til at indsætte en enkelt tabel.  Bemærk at
+% denne kode godt kan indsættes direkte i hovedfilerne, men jeg kan godt lige at
+% opdele mit indhold i flere filer.
 
 
 \begin{table}[htbp]
   \centering
   \begin{tabular}{ll}
     \toprule
-    \textbf{Environment} & \textbf{Function} \\
+    \textbf{Environment} & \textbf{Formål} \\
     \midrule
-    \texttt{document} & Document contents \\
-    \texttt{table} & Floating table such as this one \\
-    \texttt{figure} & Floating figure \\
-    \texttt{equation} & Numbered equation \\
-    \texttt{align} & Aligned, multiple equations \\
-    \texttt{itemize} & Bulleted list \\
-    \texttt{enumerate} & Numbered list \\
-    \texttt{description} & Descriptive list \\
+    \texttt{document} & Selve dokumentets indhold \\
+    \texttt{table} & Tabeller ligesom denne \\
+    \texttt{figure} & Figurer \\
+    \texttt{equation} & Nummererede ligninger \\
+    \texttt{align} & Justerede ligninger \\
+    \texttt{itemize} & Punktliste \\
+    \texttt{enumerate} & Nummereret liste \\
+    \texttt{description} & Liste med beskrivelser \\
     \bottomrule
   \end{tabular}
-  \caption{Common \LaTeX{} environments and their function}
+  \caption{Almindelige \LaTeX{} environments og deres formål}
   \label{tab:my-table}
 \end{table}
