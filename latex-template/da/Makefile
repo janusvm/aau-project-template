@@ -1,4 +1,4 @@
-# LaTeX template, Makefile (commands for GNU Make)
+# LaTeX skabelon, Makefile (kommandoer for GNU Make)
 # --------------------------------------------------------------------------------------------------
 
 MASTER = master

@@ -1,20 +1,20 @@
-% LaTeX template, master file
+% LaTeX skabelon, master fil
 % ------------------------------------------------------------------------------
-% This is the main file in the project, which collects the contents from all the
-% input files (text, images, literature databases, etc.).
+% Dette er hovedfilen i projektet, hvori indholdet fra alle input-filer samles;
+% tekst, billeder, literaturhenvisninger, osv.
 
 
-% The 'book' class is the document class with the most flexible options.
-% See https://tex.stackexchange.com/a/36989/118167
+% LaTeX' 'book' class er den documentclass, der har de mest fleksible muligheder
+% for at projekt som dette. Se https://tex.stackexchange.com/a/36989/118167
 %
-% The additional options given in the square brackets set the base font size to
-% 11pt, the paper size to A4, the layout to two-sided, and starts new chapters
-% on a right page.
+% De ekstra argumenter i firkantklammerne sætter grundskriftstørrelsen til 11pt,
+% sidestørrelse til A4, layout til to-sidet, og gør så nye chapters starter på
+% en højreside.
 \documentclass[11pt,a4paper,twoside,openright]{book}
 
-% Some top level variables that are used to automatically input title, authors,
-% etc. in various places. For more fine tuning, edit each use of the variables
-% manually.
+% Variable til automatisk at sætte titler, forfattere, osv. diverse steder
+% (såsom forsiden og titelbladet). For flere muligheder skal man justere de
+% steder, de bliver brugt, manuelt.
 \def \projecttitle       {\LaTeX{} Template}
 \def \projectsubtitle    {A Helping Hand For Getting Started}
 \def \projectdegree      {Mathematics-Economics}
@@ -26,55 +26,53 @@
   Line B. Olsen
 }
 
-% The bundled 'macros' file defines commands for creating an AAU style title
-% page (this would usually go in the preamble, but since these macros are
-% authored by someone else, I have kept them seperate from mine).
+% Den medfølgende 'macros' fil definerer kommandoer, der genererer en titelside
+% i AAU-stil.  Bemærk, at kommandoer normalt puttes ind i preamblet, men
+% 'macros' er skrevet af en anden person, så derfor har jeg beholdt den som
+% seperat fil.
 \input{incl/misc/macros}
 
-% The 'preamble' is all the stuff that goes before actual document contents. The
-% \input command is equivalent to copying and pasting the contents from the file
-% into the point where the command is called.
+% Preamblet indeholder alle de ting, som skal angives før selve indholdet af
+% dokumentet starter. Kommandoen \input svarer til at kopiere indholdet fra
+% filen ind, der hvor kommandoen kaldes.
 \input{preamble}
 
-% All contents of the document go between the \begin and \end commands for the
-% 'document' environment.
+% Alt tekst skal inputtes i et 'document' environment.
 \begin{document}
 
-% The front matter is not counted in the numbered pages and are instead numbered
-% with roman numerals. This consists of, for example, the front page, title
-% page, preface, and table of contents.
+% \frontmatter angiver, at det efterfølgende indhold ikke skal tælles med som
+% nummererede sider, men istedet have deres egne sidetal (i romertal som
+% standard).
 \frontmatter
 \include{incl/misc/frontpage}
 \include{incl/misc/titlepage}
 
-% Automatic table of contents based on the heading structure of the input files.
+% Automatisk indholdsfortegnelse baseret på overskrifterne i inputfilerne.
 \tableofcontents
 
-% The main matter is were the bulk of your work goes. Pages and headings have
-% arabic numbers.
+% \mainmatter angiver hovedindholdet, som nummereres med arabiske tal.
 \mainmatter
 
-% Input files should be partitioned such that each file corresponds to one
-% chapter.  The \include command forces a page break and inserts the contents of
-% the input file.
+% Inputfiler bør opdeles, således at hver fil indeholdet ét kapitel.
+% Kommandoen \include indsætter en ny side efterfulgt af indholdet i inputfilen.
 \include{incl/main/example1}
 \include{incl/main/example2}
 
-% Appendices
+% Appendicer
 \begin{appendices}
   \include{incl/app/pseudo}
   \include{incl/app/code}
 \end{appendices}
 
-% The backmatter is for extra stuff. Headings are not numbered.
+% \backmatter er til ekstra ting og sager. Overskrifter er ikke nummererede.
 \backmatter
 
-% Automatic lists of all figures and tables, based on their captions.
+% Automatiske lister af alle figurer og tabeller, baseret på deres captions.
 \listoffigures
 \listoftables
 
-% Automatic list of references, based on which references in the literature
-% database file were referenced throughout the document.
+% Automatisk liste af referencer, baseret på, hvilke referencer fra bib-filen,
+% der rent faktisk blev henvist til i dokumentet.
 \bibliographystyle{apalike}
 \bibliography{incl/bib/bibliography}
 

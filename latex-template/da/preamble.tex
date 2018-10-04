@@ -1,94 +1,94 @@
-% LaTeX template, preamble file
+% LaTeX skabelon, preamble-fil
 % ------------------------------------------------------------------------------
-% This is the preamble file for the project, in which package dependencies and
-% custom commands should be defined.
+% Dette er dokumentets preamble, som inkluderer ekstra pakker og definerer
+% ekstra kommandoer.
 
 
-% Base packages ----------------------------------------------------------------
+% Basispakker ------------------------------------------------------------------
 
-\usepackage[T1]{fontenc}     % adds support for printing accented characters
-\usepackage[utf8]{inputenc}  % adds support for inputting accented characters
-\usepackage[english]{babel}  % set document language
-\usepackage[square]{natbib}  % set citation style to use square brackets
-\usepackage{hyperref}        % insert clickable hyperlinks
-\usepackage{lastpage}        % reference last page (used to count numbered pages)
-
-
-% Math packages ----------------------------------------------------------------
-
-\usepackage{mathtools}  % math commands and environments
-\usepackage{amssymb}    % additional math symbols
-\usepackage{amsthm}     % theorem environments
-\usepackage{bbm}        % improved 'blackboard bold' styling
+\usepackage[T1]{fontenc}     % understøttelse til at vise specialtegn i pdf'en
+\usepackage[utf8]{inputenc}  % understøttelse til at inputte specialtegn
+\usepackage[danish]{babel}   % oversættelse af automatiske ting
+\usepackage[square]{natbib}  % sæt referencer til at bruger firkantklammer
+\usepackage{hyperref}        % indsæt klik-bare hyperlinks
+\usepackage{lastpage}        % referer til sidste side; brugt til at tælle sider
 
 
-% Figure packages --------------------------------------------------------------
+% Matematikpakker --------------------------------------------------------------
 
-\usepackage[dvipsnames]{xcolor}    % font colouring functionality
-\usepackage{graphicx}              % handling of images
-\usepackage{booktabs}              % improved tables
-\usepackage{tikz}                  % drawing vector graphics
-\usepackage{algorithm}             % algorithm floats
-\usepackage[noend]{algpseudocode}  % pseudocode listings
-\usepackage{listings}              % source code listings
+\usepackage{mathtools}  % matematik-kommandoer og -environments
+\usepackage{amssymb}    % yderligere matematiksymboler
+\usepackage{amsthm}     % environments til definitioner, sætninger, osv.
+\usepackage{bbm}        % bedre 'blackboard bold' styling
 
 
-% Styling packages -------------------------------------------------------------
+% Figurpakker ------------------------------------------------------------------
 
-\usepackage{microtype}             % improve full justification and font kerning
-\usepackage{emptypage}             % suppress page numbering on empty pages
-\usepackage{fancyhdr}              % easy customisation of headers and footers
-\usepackage{titlesec}              % easy customisation of section titles
-\usepackage[margin=3cm]{geometry}  % adjust page margins
-\usepackage[toc,page]{appendix}    % improved appendix control
+\usepackage[dvipsnames]{xcolor}    % til farvet tekst
+\usepackage{graphicx}              % håndtering af billedfiler
+\usepackage{booktabs}              % bedre tabeller
+\usepackage{tikz}                  % til at tegne vektorgrafik
+\usepackage{algorithm}             % algoritme-floats
+\usepackage[noend]{algpseudocode}  % pseudokode
+\usepackage{listings}              % source code
 
 
-% Font packages ----------------------------------------------------------------
-% With pdflatex, fonts are limited to those provided in packages (as opposed to
-% xelatex or lualatex, which can use system fonts).  The typeface is changed by
-% simply importing the package for it.
+% Layoutpakker mm. -------------------------------------------------------------
+
+\usepackage{microtype}             % bedre mellemrum og font kerning
+\usepackage{emptypage}             % fjern sidetal fra tomme sider
+\usepackage{fancyhdr}              % headers and footers
+\usepackage{titlesec}              % overskrifter
+\usepackage[margin=3cm]{geometry}  % justering af sidemargen
+\usepackage[toc,page]{appendix}    % bedre appendiks
+
+
+% Skrifttype -------------------------------------------------------------------
+% Skrifttyper er med pdflatex begrænset til dem, der findes pakker til (i
+% modsætning til f.eks. xelatex, som lader dig bruge system fonts). Dokumentets
+% skrifttype ændres ved blot at importere en pakke til det.
 %
-% See
+% Se
 % * http://www.tug.org/pracjourn/2006-1/hartke/hartke.pdf
 % * http://www.tug.dk/FontCatalogue/
 
-\usepackage{lmodern}  % improved default font
+\usepackage{lmodern}  % bedre standardfont
 
 
-% Customisations ---------------------------------------------------------------
+% Kommandoer mm. ---------------------------------------------------------------
 
 % Theorem enviroments
 \theoremstyle{plain}
-\newtheorem{thm}{Theorem}[chapter]
+\newtheorem{thm}{Sætning}[chapter]
 \newtheorem{lem}[thm]{Lemma}
 \newtheorem{prop}[thm]{Proposition}
-\newtheorem*{cor}{Corollary}
+\newtheorem*{cor}{Korollar}
 
 \theoremstyle{definition}
 \newtheorem{defn}[thm]{Definition}
-\newtheorem{exmp}[thm]{Example}
+\newtheorem{exmp}[thm]{Eksempel}
 
-% Sets
-\newcommand{\N}{\mathbb{N}}  % natural numbers
-\newcommand{\Z}{\mathbb{Z}}  % integers
-\newcommand{\Q}{\mathbb{Q}}  % rational numbers
-\newcommand{\R}{\mathbb{R}}  % real numbers
-\newcommand{\C}{\mathbb{C}}  % complex numbers
+% Talmængder
+\newcommand{\N}{\mathbb{N}}  % naturlige tal
+\newcommand{\Z}{\mathbb{Z}}  % heltal
+\newcommand{\Q}{\mathbb{Q}}  % rationelle tal
+\newcommand{\R}{\mathbb{R}}  % reelle tal
+\newcommand{\C}{\mathbb{C}}  % komplekse tal
 
-% Other operators and concepts
-\newcommand{\1}{\mathbbm{1}}     % indicator function
-\newcommand{\bigO}{\mathcal{O}}  % big O
+% Andre operatorer og begreb
+\newcommand{\1}{\mathbbm{1}}     % indikatorfunktion
+\newcommand{\bigO}{\mathcal{O}}  % store O
 
-% Headers and footers
-\fancyhead{}                      % clear default header fields
-\fancyhead[LE,RO]{\projectgroup}  % left on even, right on odd
-\fancyhead[RE]{\leftmark}         % chapter name
-\fancyhead[LO]{\rightmark}        % sections name
-\fancyfoot{}                      % clear default footer fields
-\fancyfoot[CE,CO]{\thepage}       % centered page numbers
-\pagestyle{fancy}                 % activate fancy style
+% Headers og footers
+\fancyhead{}                      % ryd standardindhold i header
+\fancyhead[LE,RO]{\projectgroup}  % venstre på lige sider, højre på ulige
+\fancyhead[RE]{\leftmark}         % kapitelnavn
+\fancyhead[LO]{\rightmark}        % sektionsnavn
+\fancyfoot{}                      % ryd standardindhold i footer
+\fancyfoot[CE,CO]{\thepage}       % centrerede sidetal
+\pagestyle{fancy}                 % aktiver 'fancy' style
 
-% Chapter titles
+% Titler/overskrifter
 % http://mirrors.dotsrc.org/ctan/macros/latex/contrib/titlesec/titlesec.pdf
 \titleformat
 {\chapter}
@@ -98,11 +98,11 @@
 {0pt}
 {\Huge\bfseries}
 
-% Predefined TikZ node styles
+% Foruddefinerede TikZ node styles
 \tikzstyle{point} = [fill,shape=circle,minimum size=3pt,inner sep=0pt]
 \tikzstyle{edge} = [fill=white,midway,inner sep=1pt]
 
-% Listing style
+% Syntax highlighting for Python-filer
 \lstdefinestyle{custompy}{
   belowcaptionskip=\baselineskip,
   breaklines=true,
