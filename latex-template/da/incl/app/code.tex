@@ -1,32 +1,32 @@
-% LaTeX template, example appendix file
+% LaTeX skabelon, eksempel på appendiks-fil
 % ------------------------------------------------------------------------------
 
-\chapter{Python Source Code}
+\chapter{Python Kode}
 \label{app:code}
 
-If you implement algorithms in specific programming languages, you might want to include the source code in an appendix like this one.
-The package \texttt{listings} provides funtionality for including syntax highlighted source code for many different languages.
+Hvis I implementerer algoritmer i et specifikt programmeringssprog, vil I muligvis inkluderer kildekoden i et appendiks som dette.
+Pakken \texttt{listings} gør det muligt at inkludere kildekode med syntax highlighting for mange forskellige sprog.
 
-With the environment \texttt{lstlisting} you can type code directly, but most often you will probably need the \verb!\lstinputlisting! command, which lets you input the code from a source file, i.e.
+Med environmentet \texttt{lstlisting} kan man indsætte kode direkte, men for det meste vil I typisk bruge \verb!\lstinputlisting! til at indsætte kode fra en fil, f.eks.
 %
 \begin{verbatim}
 \lstinputlisting[options]{path/to/source_file}
 \end{verbatim}
 %
-Some notable options for this command are:
+Nogle nyttige \texttt{options} for denne kommando er:
 %
 \begin{description}
-\item[caption] sets the listing caption
-\item[label] sets the listing label
-\item[language] sets the language for the syntax highlighter locally
-\item[style] sets the highlighter style locally
-\item[firstline] starts the listing at the specified line number
-\item[lastline] ends the listing at the specified line number
+\item[caption] sætter caption for koden
+\item[label] sætter label for koden (til \verb!\ref!)
+\item[language] sætter syntaksen til et bestemt sprog lokalt
+\item[style] sætter highlighter stilen lokalt
+\item[firstline] springer linjerne før den angivede linje over 
+\item[lastline] stopper med at læse linjer, når den angivede linje nåes
 \end{description}
 %
-In the preamble, you can also set options globally with \verb!\lstset!.
-For example, if all your source code is in Python, you might put \verb!\lstset{language=Python}!.
+I preamblet kan man også sætte globale options med \verb!\lstset!.
+For eksempel, hvis al ens kildekode er skrevet i Python, kan man skrive \verb!\lstset{language=Python}!, og så behøver man ikke bruge sætte \texttt{language} i hver enkel \verb!\lstinputlisting!.
 
 \lstinputlisting[firstline=5,caption=Bubble Sort in Python,label=py:bubble]{py/bubblesort.py}
 
-For more information, see \url{https://en.wikibooks.org/wiki/LaTeX/Source_Code_Listings}.
+For mere information, se \url{https://en.wikibooks.org/wiki/LaTeX/Source_Code_Listings}.
