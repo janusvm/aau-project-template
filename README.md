@@ -14,7 +14,13 @@ The folders and their purpose are:
 - [**exercises**](exercises/): exercises designed to get you started with writing LaTeX
 
 Each folder has its own README file with more details, which will be displayed when navigating the repository here on GitHub.
-You can download the whole repository with all its files (which will be necessary for using the LaTeX templates) either as a zip file
+To get started with a template, go to the [latest release](https://github.com/janusvm/aau-project-template/releases/latest) and download one:
+
+![](resources/img/github-releases-1.png)
+
+![](resources/img/github-releases-2.png)
+
+You can also download the _whole_ repository with all its files either as a zip file
 
 ![](resources/img/github-download-zip.png)
 
@@ -23,3 +29,4 @@ or by using [git](https://git-scm.com/):
 ```console
 git clone https://github.com/janusvm/aau-project-template.git
 ```
+

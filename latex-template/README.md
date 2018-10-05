@@ -9,8 +9,8 @@ The master document, `master.pdf`, includes a quick intro to some of the syntax 
 
 ## How to use the templates
 
-1. Download the whole repository either as a zip file or with `git` (see the [README on the front page](https://github.com/janusvm/aau-project-template))
-2. Copy the contents of the `en` folder (if you want the English version) or the `da` folder (if you want the Danish version) to your own project folder
+1. Download either the English (en.zip) or Danish (da.zip) template from the [latest release](https://github.com/janusvm/aau-project-template/releases/latest)
+2. Unpack the archive in your project folder
 3. Delete the example files:
    - `fig/alg/bubblesort.tex`
    - `fig/img/me.jpg`
