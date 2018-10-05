@@ -1,5 +1,5 @@
-# LaTeX template, example Python source code file
-# --------------------------------------------------------------------------------------------------
+# LaTeX skabelon, eksempel på Python kildekodefil
+# ------------------------------------------------------------------------------
 
 
 def bubblesort(a):
