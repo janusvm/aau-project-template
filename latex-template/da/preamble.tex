@@ -57,6 +57,15 @@
 
 % Kommandoer mm. ---------------------------------------------------------------
 
+% Danske oversættelser, som ikke fanges af babel-pakken
+\renewcommand\appendixpagename{Appendicer}
+\renewcommand\appendixtocname{Appendicer}
+\renewcommand\lstlistingname{Script}
+\renewcommand\lstlistlistingname{Scripts}
+\makeatletter
+\renewcommand\ALG@name{Algoritme}
+\makeatother
+
 % Theorem enviroments
 \theoremstyle{plain}
 \newtheorem{thm}{Sætning}[chapter]

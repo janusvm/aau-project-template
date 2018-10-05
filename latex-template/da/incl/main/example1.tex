@@ -1,11 +1,11 @@
-% LaTeX template, example input file
+% LaTeX skabelon, eksempel på inputfil
 % ------------------------------------------------------------------------------
 
-\chapter{First Example}
+\chapter{Første Eksempel}
 \label{ch:first-example}
 
-This is an example chapter with content.
-Aside from \verb!\chapter!, there are several levels available to use for partitioning your body text:
+Dette er et eksempel på et kapital med indhold.
+Udover \verb!\chapter! findes der adskillige kommandoer for at niveauinddele ens tekst:
 %
 \begin{itemize}
 \item \texttt{part}
@@ -17,105 +17,105 @@ Aside from \verb!\chapter!, there are several levels available to use for partit
 \item \texttt{subparagraph}
 \end{itemize}
 %
-Each level is a subsection of the above level.
-Titles are added automatically to the table of contents.
-See more at \url{https://en.wikibooks.org/wiki/LaTeX/Document_Structure#Sectioning_commands}.
+Hvert niveau er en underafsnit af niveauet over det.
+Overskrifter tilføjes automatisk til indholdsfortegnelsen.
+Se mere på \url{https://en.wikibooks.org/wiki/LaTeX/Document_Structure#Sectioning_commands}.
 
 
 % ------------------------------------------------------------------------------
 \section{Environments}
 \label{sec:sec-within-chap}
 
-In \LaTeX{}, you are going to be using many different kinds of \emph{environments}.
-These are scopes denoted with \verb!\begin{...}! and \verb!\end{...}!, enclosing special content such as lists, figures, equations, etc.
-Table \ref{tab:my-table} lists some commonly used environments.
+I \LaTeX{} vil I komme til at skulle bruge mange forskellige slags \texttt{environments}.
+De åbnes med \verb!\begin{...}! og lukkes med \verb!\end{...}! og har specifikke formål, såsom at lave lister, figurer, ligninger, osv.
+I Tabel \ref{tab:my-table} er nogle af de mest almindelige environments.
 
 \input{fig/tab/my-table}
 
 
-\subsection{Lists}
+\subsection{Lister}
 \label{sec:lists}
 
-There are three essential list structures: \texttt{itemize}, \texttt{enumerate}, and \texttt{description}.
-The \texttt{itemize} variant produces a simple bullet list.
-Each item in the list are prepended by the \verb!\item! command.
+Der er tre essentielle slags lister: \texttt{itemize}, \texttt{enumerate}, and \texttt{description}.
+Varianten \texttt{itemize} producerer en simpel punktliste.
+Hvert punkt angives med kommandoen \verb!\item!.
 %
 \begin{verbatim}
   \begin{itemize}
-    \item First item
-    \item Second item
-    \item Third item
+    \item Første punkt 
+    \item Andet punkt
+    \item Tredje punkt
   \end{itemize}
 \end{verbatim}
 %
 \begin{itemize}
-\item First item
-\item Second item
-\item Third item
+\item Første punkt 
+\item Andet punkt
+\item Tredje punkt
 \end{itemize}
 %
-The \texttt{enumerate} variant uses the same syntax for items as \texttt{itemize}, but produces a numbered list.
+Varianten \texttt{enumerate} bruger samme syntaks som \texttt{itemize}, men producerer en nummereret liste.
 %
 \begin{verbatim}
   \begin{enumerate}
-    \item First item
-    \item Second item
-    \item Third item
+    \item Første punkt 
+    \item Andet punkt
+    \item Tredje punkt
   \end{enumerate}
 \end{verbatim}
 %
 \begin{enumerate}
-\item First item
-\item Second item
-\item Third item
+\item Første punkt 
+\item Andet punkt
+\item Tredje punkt
 \end{enumerate}
 %
-Finally, the \texttt{description} list in which \verb!\item! is given an item name as an optional argument, and the contents of the line is a description of that item.
-This produces a list where the item names are typeset in bold followed by their descriptions as normal text.
+I \texttt{description}-listen tager \verb!\item! kommandoerne navnet på det, som beskrives, som argument, og resten af linjen udgør selve beskrivelsen.
+Dette producerer en liste, hvor navnene er skrevet med fed, og deres beskrivelser er normal tekst.
 %
 \begin{verbatim}
   \begin{description}
-    \item[First item] Description of first item
-    \item[Second item] Description of second item
-    \item[Third item] Description of third item
+    \item[Første ting] Beskrivelse af den første ting
+    \item[Anden ting] Beskrivelse af den anden ting
+    \item[Tredje ting] Beskrivelse af den tredje ting
   \end{description}
 \end{verbatim}
 %
 \begin{description}
-\item[First item] Description of first item
-\item[Second item] Description of second item
-\item[Third item] Description of third item
+\item[Første ting] Beskrivelse af den første ting
+\item[Anden ting] Beskrivelse af den anden ting
+\item[Tredje ting] Beskrivelse af den tredje ting
 \end{description}
 
 
-\subsection{Equations}
+\subsection{Ligninger}
 \label{sec:equations}
 
-One of the main reasons why people use \LaTeX{} is the beautiful math typesetting.
-There are several different math environments to suit your needs, and most come in a numbered and unnumbered variants.
-For example, the code
+En af hovedårsagerne bag, hvorfor folk bruger \LaTeX{}, er hvor godt matematiske formler ser ud.
+Der er mange forskellige matematikrelaterede environments til forskellige formål, og de fleste har både nummererede og unummererede varianter.
+For eksempel, hvis man skriver
 %
 \begin{verbatim}
 \begin{equation}
   \label{eq:1}
-  e^{i\pi} - 1 = 0
+  e^{i\pi} - 1 = 0 ,
 \end{equation}
 \end{verbatim}
 %
-produces the ouput
+så får man følgende output:
 %
 \begin{equation}
   \label{eq:1}
   e^{i\pi} + 1 = 0 ,
 \end{equation}
 %
-and since it was given a label, it can be referenced with the command \verb!\eqref{eq:1}!, which produces a clickable reference in parentheses, \eqref{eq:1}.
-If instead of \texttt{equation} you put \texttt{equation*}, the equation does not get a number.
-Equivalently, you can use \verb!\[...\]!, so the code \verb!\[ e^{i\pi} + 1 = 0 \]! produces
+og fordi den har en label, så kan man referere til den med kommandoen \verb!\eqref{eq:1}!, hvilket producerer en klikbar reference i paranteser, \eqref{eq:1}.
+Hvis man i stedet for \texttt{equation} bruger \texttt{equation*}, så får ligninger \emph{ikke} et nummer.
+Alternativt kan man bruge \verb!\[...\]!, så hvis man skriver \verb!\[ e^{i\pi} + 1 = 0 \]!, så får man
 \[ e^{i\pi} + 1 = 0 .\]
 
-If you need multiple, aligned equations, e.g. for step-by-step calculations, use the \texttt{align} environment, which aligns the contents at \texttt{\&} characters.
-For example,
+Hvis man skal have flere ligninger i træk, f.eks. til trin-for-trin udregninger, så brug \texttt{align}, som får ligninger til at justere sig omkring \texttt{\&} symboler.
+For eksempel, hvis man skriver
 %
 \begin{verbatim}
 \begin{align*}
@@ -124,89 +124,89 @@ For example,
 \end{align*}
 \end{verbatim}
 %
-produces
+så vil \(=\) i de to ligninger stå lige over hinanden;
 %
 \begin{align*}
   (x + y)^{2} &= x^{2} + xy + yx + y^{2} \\
               &= x^{2} + y^{2} + 2xy .
 \end{align*}
 %
-The double backslash denotes a line break.
-Note the asterisk; like with \texttt{equation}, \texttt{align} has both a numbered and unnumbered version.
-The numbered version has a seperate number for each line.
+Dobbelt backslash indsætter et linjeskift.
+Bemærk stjernen; ligesom med \texttt{equation} så har \texttt{align} både en nummereret og unummereret udgave.
+Den nummererede udgave har et seperat nummer for \emph{hver} linje.
 
-For rendering inline math, e.g. \(\cos^{2}\theta + \sin^{2}\theta = 1\), use \verb!\(...\)!.
-Alternatively, you can also use \verb!$...$!, but \verb!\(...\)! has improved spacing and error messages.
+For at skrive matematik i brødteksten, f.eks. \(\cos^{2}\theta + \sin^{2}\theta = 1\), brug \verb!\(...\)!.
+Alternativt kan man bruge \verb!$...$!, men \verb!\(...\)! har bedre mellemrum og fejlmeddelelser.
 %
-See \url{https://en.wikibooks.org/wiki/LaTeX/Mathematics} for a good reference of symbols and commands.
+Se \url{https://en.wikibooks.org/wiki/LaTeX/Mathematics} for en god oversigt over kommandoer og symboler.
 
 
-\subsection{Figures}
+\subsection{Figurer}
 \label{sec:figures}
 
-Figures in \LaTeX{} are input as so-called \emph{floats} using the \texttt{figure} environment.
-A floating object cannot be broken over a page, so the figure will be repositioned depending on the available space on the page.
-The syntax is as follows:
+Figurer i \LaTeX{} indsættes som såkaldte \emph{floats} ved brug af \texttt{figure} environmentet.
+Et ``flydende'' objekt kan ikke brydes af et sideskift, så en figur vil flyttes, hvis der ikke er plads nok tilbage på siden.
+Syntaksen er som følger:
 %
 \begin{verbatim}
 \begin{figure}[placement]
   \centering
   \includegraphics[options]{path/to/image}
-  \caption{The figure caption}
+  \caption{Billedteksten}
   \label{fig:label}
 \end{figure}
 \end{verbatim}
 %
-The optional argument \texttt{placement} can be either of \texttt{h} (here), \texttt{t} (top of page), \texttt{b} (bottom of page), or \texttt{p} (put on special page with only floats).
-The \verb!\centering! command is there to center the image.
-Among the options available for \verb!\includegraphics!, the most important one for you will probably be \texttt{width}.
-To make the image take up half the page (within margins), use \verb!width=0.5\textwidth!.
-All figures should have a caption, which is set with the \verb!\caption! command, and the \verb!\label! lets us reference it (for example, \verb!Figure \ref{fig:me}! becomes Figure \ref{fig:me}).
-For more info, see \url{https://en.wikibooks.org/wiki/LaTeX/Floats,_Figures_and_Captions}.
+Argumentet \texttt{placement} kan enten være \texttt{h} (her), \texttt{t} (toppen af siden), \texttt{b} (bunden af siden), eller \texttt{p} (på en særlig side kun for floats).
+Kommandoen \verb!\centering! centrerer billedet på siden.
+Iblandt de forskellige \texttt{options}, man kan give til \verb!\includegraphics!, så er det vigtigste nok \texttt{width}.
+For at få billedet til at fylde halvdelen af siden (margener ikke inkluderet), så brug \verb!width=0.5\textwidth!.
+Alle figurer bør have en billedtekst, hvilket sætes med kommandoen \verb!\caption!, og \verb!\label! gør det muligt at referere til den (for eksempel bliver \verb!Figur \ref{fig:me}! til Figur \ref{fig:me}).
+For mere info, se \url{https://en.wikibooks.org/wiki/LaTeX/Floats,_Figures_and_Captions}.
 
 \input{fig/img/me}
 
-Figures need not necessarily consist of images like JPG, PNG, or PDF files, but can also consist of \LaTeX{} code.
-An important example of this is \emph{TikZ}, a native vector graphics framework in \LaTeX{}.
-A TikZ picture is enclosed in the environment \texttt{tikzpicture}, which can be enclosed in a \texttt{figure} environment, just like images:
+Figurer behøver ikke nødvendigvist at bestå af billedfiler som JPG, PNG eller PDF, men kan også bestå af \LaTeX{}-kode.
+Et vigtigt eksempel på dette er \emph{TiKZ}, som bruges til at tegne vektorgrafik med \LaTeX{}-kommandoer.
+Koden til et TiKZ-billede indsættes i environmentet \texttt{tikzpicture}, som indsættes i et \texttt{figure} environment, ligesom billeder:
 %
 \begin{verbatim}
 \begin{figure}[placement]
   \centering
   \begin{tikzpicture}
-    % tikz code goes here ...
+    % indsæt tikz kode her...
   \end{tikzpicture}
-  \caption{The figure caption}
+  \caption{Billedtekst}
   \label{fig:label}
 \end{figure}
 \end{verbatim}
 %
-An example of a graph drawn with TikZ code is shown on Figure \ref{fig:graph}.
+Et eksempel på en graf tegnet med TiKZ-kode er vist på Figur \ref{fig:graph}.
 
 \input{fig/tikz/my-graph}
 
-To learn TikZ syntax, see \citep{minimaltikz}, the tutorial sections of \citep{tikzmanual}, and \url{https://en.wikibooks.org/wiki/LaTeX/PGF/TikZ}.
+For at lære syntaksen, se \citep{minimaltikz}, tutorial-afsnittene af \citep{tikzmanual}, og \url{https://en.wikibooks.org/wiki/LaTeX/PGF/TikZ}.
 
 
-\subsection{Tables}
+\subsection{Tabeller}
 \label{sec:tables}
 
-Like with figures, tables are also input as floats, using the \texttt{table} environment.
-The actual contents of a table is placed in a \texttt{tabular} environment, where columns are seperated by a \verb!&!, and rows are seperated by a \verb!\\!:
+Ligesom med figurer så indsættes tabeller som floats, og dette gøres med \texttt{table} environmentet.
+Selve indholdet af tabellen indsættes i et \texttt{tabular} environment, hvor søjlerne separeres af en \verb!&!, og rækkerne separeres af en \verb!\\!:
 
 \begin{verbatim}
   \begin{table}[placement]
     \begin{tabular}{columns}
-      % table code goes here...
+      % indsæt indholdet af tabellen her...
     \end{tabular}
-    \caption{The table caption}
+    \caption{Beskrivelse af tabellen}
     \label{tab:label}
   \end{table}
 \end{verbatim}
 
-The \texttt{placement} argument is the same as for figures.
-The \texttt{columns} argument is a specification of the columns and consists in its most basic form of the letters \texttt{l}, \texttt{c}, and/or \texttt{r}, optionally interspersed with \verb!|! where you want vertical lines.
-For example, having \verb!\begin{tabular}{r|cc}! would tell \LaTeX{} that the table has three columns, the first of which is \textbf{r}ight aligned, followed by a vertical line, and then two \textbf{c}enter aligned columns with no divider between them.
+Argumentet \texttt{placement} er det samme som for figurer.
+Argumentet \texttt{columns} er en specifikation af søjlerne og består i sin mest basale form af bogstaverne \texttt{l}, \texttt{c}, og/eller \texttt{r}, muligvis med \verb!|! indsæt i de mellemrum, hvor der skal være lodrette streger.
+For eksempel ville \verb!\begin{tabular}{r|cc}! fortælle \LaTeX{}, at tabellen har tre søjler, hvoraf den første er højrejusteret (\texttt{r}) og efterføles af en lodret streg, og de to næste søjler er centrerede uden en streg imellem dem.
 
-For a complete example of a table, see the source code for Table \ref{tab:my-table} (located in \verb!fig/tab/my-table.tex!).
-For more information and advanced column options, see \url{https://en.wikibooks.org/wiki/LaTeX/Tables}.
+For et fuldstændigt eksempel på en tabel, se kildekoden for Tabel \ref{tab:my-table} (kan findes i \verb!fig/tab/my-table.tex!).
+For mere informatin og mere avancerede options, se \url{https://en.wikibooks.org/wiki/LaTeX/Tables}.

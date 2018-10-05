@@ -1,75 +1,76 @@
 % LaTeX template, example input file
 % ------------------------------------------------------------------------------
 
-\chapter{Second Example}
+\chapter{Andet Eksempel}
 \label{ch:second-example}
 
-Here is another example input file.
+Her er endnu et eksempel på en inputfil.
 
-\section{Custom Environments and Commands}
+
+\section{Brugerdefinerede Environments og Kommandoer}
 \label{sec:custom}
 
-While \LaTeX{} provides commands for many different purposes, you will often find yourself defining your own.
-For this template, I have included some examples of custom environments and commands in the preamble (\texttt{premable.tex}).
+Selvom \LaTeX{} har mange nyttige kommandoer indbygget, så vil I ofte have brug for at definere jeres egne.
+I denne skabelon har jeg inkluderet nogle eksempler på brugerdefinerede environments og kommandoer i preamblet (\texttt{preamble.tex}).
 
-Such commands can save you a lot of typing when working on a long, modular document such as a semester project.
-For instance, instead of typing \verb!\mathbb{N}! every time you want the symbol for the set of natural numbers, define a shorter command, like \verb!\N!.
-The syntax for defining commands is as follows:
-%
+Sådanne kommandoer kan spare jer for at skulle gentage jer selv for meget, når I skriver lange dokumenter såsom et semesterprojekt.
+For eksempel kan man, i stedet for at skrive \verb!\mathbb{N}! hver gang, man skal bruge symbolet for de naturlige tal, definere en kortere kommando som f.eks. \verb!\N!.
+Syntaksen er som følger:
+% 
 \begin{verbatim}
 \newcommand{name}[num]{definition}
 \end{verbatim}
 %
-where \texttt{name} is the command name, e.g. \verb!\N!, \texttt{num} is the number of arguments the command takes (omit the square brackets if the command takes no arguments), and \texttt{definition} is the output of the command, e.g. \verb!\mathbb{N}!.
+hvor \texttt{name} er kommandoens navn, f.eks. \verb!\N!, \texttt{num} er antallet af argumenter, kommandoen tager (udelad firkantklammerne, hvis kommandoen ingen argumenter tager), og \texttt{definition} er outputtet af kommandoen, f.eks. \verb!\mathbb{N}!.
 
 
-\subsection{Definitions, Theorems, Proofs}
+\subsection{Definition, Sætning, Bevis}
 \label{sec:thms}
 
-In a mathematics project, you are going to be including mathematical definitions, propositions, lemmas, theorems, etc.
-The \texttt{amsthm} package provides a simple way to define such environments:
+I et matematikprojekt får man brug for at skrive matematiske definitioner, propositioner, lemmaer, sætninger, osv.
+Pakken \texttt{amsthm} giver en simpel måde at definere environments til formålet:
 %
 \begin{verbatim}
 \newtheorem{name}{Printed output}[numberby]
 \end{verbatim}
 %
-A few examples are included in the preamble.
-See \url{https://en.wikibooks.org/wiki/LaTeX/Theorems} for more information.
+Et par eksempler er inkluderet i preamblet.
+Se \url{https://en.wikibooks.org/wiki/LaTeX/Theorems} for mere information.
 %
-\begin{defn}[Rational numbers]
-  A real number \(r\) is called \emph{rational} if there exist integers \(p\) and \(q\) with \(q \neq 0\) such that \(r = p/q\)
-  (a real number which is not rational is called \emph{irrational}).
-  The set of rational numbers is denoted with \(\Q\).
+\begin{defn}[Rationelle tal]
+  A reelt tal \(r\) kaldes \emph{rationelt}, hvis der eksisterer heltal \(p\) og \(q\) med \(q \neq 0\) sådan at \(r = p/q\)
+  (et reelt tal, som ikke er rationelt kaldes \emph{irrationelt}).
+  Mængden af rationelle tal skrives som \(\Q\).
 \end{defn}
 %
-\begin{thm}[Example of Named Theorem]
-  \(\sqrt{2}\) is irrational.
+\begin{thm}[Eksempel på Navngivet Sætning]
+  \(\sqrt{2}\) er irrationel.
 \end{thm}
 %
 \begin{proof}
-  Suppose \(\sqrt{2} \in \Q\) and let \(k = \min\{\, N \in \N : N\sqrt{2} \in \N \,\}\).
-  But then \(k (\sqrt{2} - 1) = (k\sqrt{2} - k) \in \N\), and \(k(\sqrt{2} - 1) < k\), which is a contradiction.
-  Therefore, \(\sqrt{2} \notin \Q\).
+  Antag \(\sqrt{2} \in \Q\) og lad \(k = \min\{\, N \in \N : N\sqrt{2} \in \N \,\}\).
+  Men så har vi, at \(k (\sqrt{2} - 1) = (k\sqrt{2} - k) \in \N\), og \(k(\sqrt{2} - 1) < k\), hvilket er en modstrid.
+  Dermed har vi, at \(\sqrt{2} \notin \Q\).
 \end{proof}
 
 
-\section{Citations}
+\section{Kildehenvisninger}
 \label{sec:citations}
 
-When you use other people's work, you must cite them.
-Citations in \LaTeX{} is usually handled with BibTeX, a procedure that identifies resources from a bibliography file you provide.
-Literature resources must be defined in a \texttt{.bib} file and included with the \verb!bibliography! command.
-Each entry in this file must have a resource type and a key to identify it by.
-The syntax for citing a resource is
+Når I bruger andre folks værker, så skal i henvise til dem.
+Henvisninger i \LaTeX{} håndteres normal med BibTeX, et program, der identificerer ressourcer fra en bibliografi-fil, I skriver.
+Literaturhenvisninger skal defineres i en \texttt{.bib}-fil og inkluderes med kommandoen \verb!\bibliography!.
+Hver ressource i denne fil skal have en type og et ID, som bruges til at indsætte henvisninger til den.
+Syntaksen for at indsætte en henvisning er 
 %
 \begin{verbatim}
 \citep[scope]{bibkey}
 \end{verbatim}
 %
-where \texttt{bibkey} is the unique identifier you give the resource in the \texttt{.bib} file, and \texttt{scope} can be used to refer to a specific chapter or range of pages.
+hvor \texttt{bibkey} er det ID, I giver en ressource i \texttt{.bib}-filen, og \texttt{scope} kan bruges til at henvise til speficikke afsnit eller sidetal.
 
-When you cite a resource, that resource is automatically added to the literature list, and in the PDF file the citations become clickable links pointing to that list.
-For example, by citing \citep[pp. 104-110]{edpenn}, an entry for it is added to the bibliography on the last page.
+Når I henviser til en ressource, bliver den automatisk tilføjet til literatturlisten, og i PDF-filen bliver henvisninger i teksten til klikbare links til denne liste.
+For eksempel, ved at henvise til \citep[s. 104-110]{edpenn}, tilføjes denne til listen på sidste side.
 
-There are several different types of BibTeX entries, and each type has its own set of mandatory and optional fields.
-For more information, see \url{https://en.wikibooks.org/wiki/LaTeX/Bibliography_Management#BibTeX}.
+Der er mange forskellige typer af ressourcer i BibTeX, og hver type har sit eget sæt af felter, som skal eller kan udfyldes.
+For mere information, se \url{https://en.wikibooks.org/wiki/LaTeX/Bibliography_Management#BibTeX}.
