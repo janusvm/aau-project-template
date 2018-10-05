@@ -1,0 +1,21 @@
+% LaTeX skabelon, eksempel på appendiks-fil
+% ------------------------------------------------------------------------------
+
+\chapter{Pseudokode}
+\label{app:pseudocode}
+
+For at indsætte pseudokode i ens dokument bruges \texttt{algorithmic} environmentet, som placeres inde i et \texttt{algorithm} environment for at få en figur-agtig float:
+%
+\begin{verbatim}
+\begin{algorithm}
+  \begin{algorithmic}
+    % pseudokode her...
+  \end{algorithmic}
+  \caption{algoritmens titel}
+  \label{alg:label}
+\end{algorithm}
+\end{verbatim}
+
+\input{fig/alg/bubblesort}
+
+Se \url{https://en.wikibooks.org/wiki/LaTeX/Algorithms#Typesetting_using_the_algorithmicx_package} for en oversigt over syntaksen.

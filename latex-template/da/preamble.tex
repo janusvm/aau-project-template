@@ -1,0 +1,126 @@
+% LaTeX skabelon, preamble-fil
+% ------------------------------------------------------------------------------
+% Dette er dokumentets preamble, som inkluderer ekstra pakker og definerer
+% ekstra kommandoer.
+
+
+% Basispakker ------------------------------------------------------------------
+
+\usepackage[T1]{fontenc}     % understøttelse til at vise specialtegn i pdf'en
+\usepackage[utf8]{inputenc}  % understøttelse til at inputte specialtegn
+\usepackage[danish]{babel}   % oversættelse af automatiske ting
+\usepackage[square]{natbib}  % sæt referencer til at bruger firkantklammer
+\usepackage{hyperref}        % indsæt klik-bare hyperlinks
+\usepackage{lastpage}        % referer til sidste side; brugt til at tælle sider
+
+
+% Matematikpakker --------------------------------------------------------------
+
+\usepackage{mathtools}  % matematik-kommandoer og -environments
+\usepackage{amssymb}    % yderligere matematiksymboler
+\usepackage{amsthm}     % environments til definitioner, sætninger, osv.
+\usepackage{bbm}        % bedre 'blackboard bold' styling
+
+
+% Figurpakker ------------------------------------------------------------------
+
+\usepackage[dvipsnames]{xcolor}    % til farvet tekst
+\usepackage{graphicx}              % håndtering af billedfiler
+\usepackage{booktabs}              % bedre tabeller
+\usepackage{tikz}                  % til at tegne vektorgrafik
+\usepackage{algorithm}             % algoritme-floats
+\usepackage[noend]{algpseudocode}  % pseudokode
+\usepackage{listings}              % source code
+
+
+% Layoutpakker mm. -------------------------------------------------------------
+
+\usepackage{microtype}             % bedre mellemrum og font kerning
+\usepackage{emptypage}             % fjern sidetal fra tomme sider
+\usepackage{fancyhdr}              % headers and footers
+\usepackage{titlesec}              % overskrifter
+\usepackage[margin=3cm]{geometry}  % justering af sidemargen
+\usepackage[toc,page]{appendix}    % bedre appendiks
+
+
+% Skrifttype -------------------------------------------------------------------
+% Skrifttyper er med pdflatex begrænset til dem, der findes pakker til (i
+% modsætning til f.eks. xelatex, som lader dig bruge system fonts). Dokumentets
+% skrifttype ændres ved blot at importere en pakke til det.
+%
+% Se
+% * http://www.tug.org/pracjourn/2006-1/hartke/hartke.pdf
+% * http://www.tug.dk/FontCatalogue/
+
+\usepackage{lmodern}  % bedre standardfont
+
+
+% Kommandoer mm. ---------------------------------------------------------------
+
+% Danske oversættelser, som ikke fanges af babel-pakken
+\renewcommand\appendixpagename{Appendicer}
+\renewcommand\appendixtocname{Appendicer}
+\renewcommand\lstlistingname{Script}
+\renewcommand\lstlistlistingname{Scripts}
+\makeatletter
+\renewcommand\ALG@name{Algoritme}
+\makeatother
+
+% Theorem enviroments
+\theoremstyle{plain}
+\newtheorem{thm}{Sætning}[chapter]
+\newtheorem{lem}[thm]{Lemma}
+\newtheorem{prop}[thm]{Proposition}
+\newtheorem*{cor}{Korollar}
+
+\theoremstyle{definition}
+\newtheorem{defn}[thm]{Definition}
+\newtheorem{exmp}[thm]{Eksempel}
+
+% Talmængder
+\newcommand{\N}{\mathbb{N}}  % naturlige tal
+\newcommand{\Z}{\mathbb{Z}}  % heltal
+\newcommand{\Q}{\mathbb{Q}}  % rationelle tal
+\newcommand{\R}{\mathbb{R}}  % reelle tal
+\newcommand{\C}{\mathbb{C}}  % komplekse tal
+
+% Andre operatorer og begreb
+\newcommand{\1}{\mathbbm{1}}     % indikatorfunktion
+\newcommand{\bigO}{\mathcal{O}}  % store O
+
+% Headers og footers
+\fancyhead{}                      % ryd standardindhold i header
+\fancyhead[LE,RO]{\projectgroup}  % venstre på lige sider, højre på ulige
+\fancyhead[RE]{\leftmark}         % kapitelnavn
+\fancyhead[LO]{\rightmark}        % sektionsnavn
+\fancyfoot{}                      % ryd standardindhold i footer
+\fancyfoot[CE,CO]{\thepage}       % centrerede sidetal
+\pagestyle{fancy}                 % aktiver 'fancy' style
+
+% Titler/overskrifter
+% http://mirrors.dotsrc.org/ctan/macros/latex/contrib/titlesec/titlesec.pdf
+\titleformat
+{\chapter}
+[hang]
+{\Huge\bfseries}
+{\thechapter\enspace\textcolor{BrickRed}{|}\enspace}
+{0pt}
+{\Huge\bfseries}
+
+% Foruddefinerede TikZ node styles
+\tikzstyle{point} = [fill,shape=circle,minimum size=3pt,inner sep=0pt]
+\tikzstyle{edge} = [fill=white,midway,inner sep=1pt]
+
+% Syntax highlighting for Python-filer
+\lstdefinestyle{custompy}{
+  belowcaptionskip=\baselineskip,
+  breaklines=true,
+  language=Python,
+  showstringspaces=false,
+  basicstyle=\small\ttfamily,
+  keywordstyle=\bfseries\color{green!40!black},
+  commentstyle=\itshape\color{purple!40!black},
+  identifierstyle=\color{blue},
+  stringstyle=\color{orange},
+}
+\lstset{language=Python,style=custompy,captionpos=b}

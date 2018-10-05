@@ -1,0 +1,41 @@
+% LaTeX skabelon, eksempel på titelside
+% ------------------------------------------------------------------------------
+% Titelsiden genereres af kommandoen \aautitlepage fra macros.tex
+
+
+\pdfbookmark[0]{Title page}{label:titlepage_da}
+\aautitlepage{%
+  \danishprojectinfo{
+    \projecttitle  % projektets titel
+  }{%
+    Projektskrivning  % projektets emne
+  }{%
+    Efterårssemesteret 2018  % projektperiode
+  }{%
+    \projectgroup  % projektgruppe
+  }{
+    % liste af gruppemedlemmer
+    \projectauthors
+  }{%
+    % liste af vejledere
+    \projectsupervisors
+  }{%
+    0  % antal udskrevne kopier
+  }{%
+    \today  % dato for færdiggørelse
+  }%
+}{%
+  % Afdeling og addresse
+  \textbf{Institut for Matematiske Fag}\\
+  Skjernvej 4A\\
+  DK-9220 Aalborg Ø\\
+  \href{http://math.aau.dk}{http://math.aau.dk}
+}{
+  % Abstract
+  \input{incl/misc/abstract}
+} 
+
+
+
+
+

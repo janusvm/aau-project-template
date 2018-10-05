@@ -1,0 +1,26 @@
+% LaTeX skabelon, eksempel på inputfil med en tabel
+% ------------------------------------------------------------------------------
+% Denne fil indeholder LaTeX-kode til at indsætte en enkelt tabel.  Bemærk at
+% denne kode godt kan indsættes direkte i hovedfilerne, men jeg kan godt lige at
+% opdele mit indhold i flere filer.
+
+
+\begin{table}[htbp]
+  \centering
+  \begin{tabular}{ll}
+    \toprule
+    \textbf{Environment} & \textbf{Formål} \\
+    \midrule
+    \texttt{document} & Selve dokumentets indhold \\
+    \texttt{table} & Tabeller ligesom denne \\
+    \texttt{figure} & Figurer \\
+    \texttt{equation} & Nummererede ligninger \\
+    \texttt{align} & Justerede ligninger \\
+    \texttt{itemize} & Punktliste \\
+    \texttt{enumerate} & Nummereret liste \\
+    \texttt{description} & Liste med beskrivelser \\
+    \bottomrule
+  \end{tabular}
+  \caption{Almindelige \LaTeX{} environments og deres formål}
+  \label{tab:my-table}
+\end{table}
