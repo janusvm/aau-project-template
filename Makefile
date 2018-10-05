@@ -10,6 +10,14 @@ PDFS := $(RMDS:.Rmd=.pdf)
 
 all: latex notes
 
+release: clean-build
+	mkdir -p build
+	for dir in $(TEMPLATES); do \
+		$(MAKE) -C $$dir release; \
+		echo build/`basename $$dir`.zip; \
+		(cd $$dir && zip -r - . -x Makefile) > build/`basename $$dir`.zip; \
+	done
+
 latex:
 	for dir in $(TEMPLATES); do \
 		$(MAKE) -C $$dir; \
@@ -18,13 +26,16 @@ latex:
 notes: $(PDFS)
 
 %.pdf: %.Rmd
-	cd resources; \
+	cd resources
 	Rscript --slave --vanilla -e "rmarkdown::render('$(<F)')"
 
-clean:
-	rm -f $(PDFS); \
+clean-build:
+	rm -f build/*
+
+clean: clean-build
+	rm -f $(PDFS)
 	for dir in $(TEMPLATES); do \
 		$(MAKE) -C $$dir clean; \
 	done
 
-.PHONY: all latex notes clean
+.PHONY: all release latex notes clean-build clean
