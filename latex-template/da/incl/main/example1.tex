@@ -161,7 +161,7 @@ Argumentet \texttt{placement} kan enten være \texttt{h} (her), \texttt{t} (topp
 Kommandoen \verb!\centering! centrerer billedet på siden.
 Iblandt de forskellige \texttt{options}, man kan give til \verb!\includegraphics!, så er det vigtigste nok \texttt{width}.
 For at få billedet til at fylde halvdelen af siden (margener ikke inkluderet), så brug \verb!width=0.5\textwidth!.
-Alle figurer bør have en billedtekst, hvilket sætes med kommandoen \verb!\caption!, og \verb!\label! gør det muligt at referere til den (for eksempel bliver \verb!Figur \ref{fig:me}! til Figur \ref{fig:me}).
+Alle figurer bør have en billedtekst, hvilket sættes med kommandoen \verb!\caption!, og \verb!\label! gør det muligt at referere til den (for eksempel bliver \verb!Figur \ref{fig:me}! til Figur \ref{fig:me}).
 For mere info, se \url{https://en.wikibooks.org/wiki/LaTeX/Floats,_Figures_and_Captions}.
 
 \input{fig/img/me}
@@ -192,7 +192,7 @@ For at lære syntaksen, se \citep{minimaltikz}, tutorial-afsnittene af \citep{ti
 \label{sec:tables}
 
 Ligesom med figurer så indsættes tabeller som floats, og dette gøres med \texttt{table} environmentet.
-Selve indholdet af tabellen indsættes i et \texttt{tabular} environment, hvor søjlerne separeres af en \verb!&!, og rækkerne separeres af en \verb!\\!:
+Selve indholdet af tabellen indsættes i et \texttt{tabular} environment, hvor søjlerne separeres af \verb!&!, og rækkerne separeres af \verb!\\!:
 
 \begin{verbatim}
   \begin{table}[placement]
@@ -209,4 +209,4 @@ Argumentet \texttt{columns} er en specifikation af søjlerne og består i sin me
 For eksempel ville \verb!\begin{tabular}{r|cc}! fortælle \LaTeX{}, at tabellen har tre søjler, hvoraf den første er højrejusteret (\texttt{r}) og efterføles af en lodret streg, og de to næste søjler er centrerede uden en streg imellem dem.
 
 For et fuldstændigt eksempel på en tabel, se kildekoden for Tabel \ref{tab:my-table} (kan findes i \verb!fig/tab/my-table.tex!).
-For mere informatin og mere avancerede options, se \url{https://en.wikibooks.org/wiki/LaTeX/Tables}.
+For mere information og mere avancerede options, se \url{https://en.wikibooks.org/wiki/LaTeX/Tables}.
