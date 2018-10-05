@@ -1,1 +1,24 @@
 theme: jekyll-theme-cayman
+
+url: "https://janusvm.github.io/aau-project-template"
+baseurl: "/aau-project-template"
+
+title: "AAU Project Template"
+description: "LaTeX templates and learning resources for semester projects at Aalborg University"
+
+navbar-links:
+  Templates: "latex-template"
+  Resources: "resources"
+  Exercises: "exercises"
+
+author:
+  name: "Janus Valberg-Madsen"
+  bio: "PhD Student in Mathematics-Economics"
+  email: "janus@math.aau.dk"
+  github: "janusvm"
+  twitter: "atokniiro"
+  instagram: "atokniiro"
+
+markdown: kramdown
+kramdown:
+  input: GFM
