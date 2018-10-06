@@ -6,11 +6,6 @@ baseurl: "/aau-project-template"
 title: "AAU Project Template"
 description: "LaTeX templates and learning resources for semester projects at Aalborg University"
 
-navbar-links:
-  Templates: "latex-template"
-  Resources: "resources"
-  Exercises: "exercises"
-
 author:
   name: "Janus Valberg-Madsen"
   bio: "PhD Student in Mathematics-Economics"
