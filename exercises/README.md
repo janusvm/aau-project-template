@@ -22,31 +22,29 @@ In other words, `exercises.tex` is the master file, and each exercise has its ow
 
 1. Typeset the following (hint: `\(...\)`):
 
-![](img/math-inline-1.svg)
+    ![](img/math-inline-1.svg)
 
 2. Typeset the following equation using the `equation` environment (i.e. `\begin{equation} ... \end{equation}`):
 
-![](img/math-display-1.svg)
+    ![](img/math-display-1.svg)
 
 3. Typeset the following matrix (hint: use the `bmatrix` environment):
 
-![](img/matrix.svg)
+    ![](img/matrix.svg)
 
 4. Typeset the following list (hint: list items can themselves be lists):
 
-![](img/list.svg)
+    ![](img/list.svg)
 
 5. Typeset the following aligned equations (hint: use the `align*` environment with `&` to align and `\\` as newline):
 
-![](img/math-align-1.svg)
+    ![](img/math-align-1.svg)
 
 6. Insert the image `thinking-face.png` located in this folder as a figure (hint: `figure` environment and `\includegraphics{path/to/image.png}`)
 
 7. Typeset the following table (hint: <http://www.tablesgenerator.com/>):
 
-![](img/tab.svg)
-
-
+    ![](img/tab.svg)
 
 
 ## (Optional) Advanced topics
@@ -55,25 +53,25 @@ For the advanced topics, create a new file `advanced.tex`, put a `\section` on t
 
 1. Create a tikz figure looking like this (you'll need to include the package `tikz` in the document preamble):
 
-![](img/tikz.svg)
+    ![](img/tikz.svg)
 
-Hint: before the `figure` environment, put the line
+    Hint: before the `figure` environment, put the line
 
-```tex
-\tikzstyle{point} = [thick, circle, draw=black, minimum size=1em, inner sep=1pt, fill=lightgray]
-```
+    ```tex
+    \tikzstyle{point} = [thick, circle, draw=black, minimum size=1em, inner sep=1pt, fill=lightgray]
+    ```
 
-Then, you can type `\node[point] (a) at (1,2) {$a$};` to insert a node called `a` at the grid position (1,2) with the label _a_, formatted according to the tikzstyle `point`.
-After defining nodes, you can draw lines between nodes like:
+    Then, you can type `\node[point] (a) at (1,2) {$a$};` to insert a node called `a` at the grid position (1,2) with the label _a_, formatted according to the tikzstyle `point`.
+    After defining nodes, you can draw lines between nodes like:
 
-```tex
-\draw (a) -- (b);
-```
+    ```tex
+    \draw (a) -- (b);
+    ```
 
-where `a` and `b` are the names of nodes.
+    where `a` and `b` are the names of nodes.
 
 2. Find out how to define your own `newcommand` (google is your friend) and create the command `reals`, which takes one argument, `n` and outputs
 
-![](img/newcommand.svg)
+    ![](img/newcommand.svg)
 
-when you type `\(reals{n}\)`.
+    when you type `\(reals{n}\)`.
