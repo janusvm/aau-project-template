@@ -4,12 +4,13 @@ Most topics are covered by this page: <https://en.wikibooks.org/wiki/LaTeX>
 
 Otherwise, googling "latex topic" is the way to go (e.g. "latex insert matrix").
 
-A helpful resource for typesetting math, if you don't know the syntax is: <http://www.codecogs.com/latex/eqneditor.php>  
+A helpful resource for typesetting math, if you don't know the syntax is: <http://www.codecogs.com/latex/eqneditor.php>
 It lets you point and click to insert symbols and generate the code for you.
 
 
-## Basics 
+## Basics
 
+First, [download `exercises.tex`](exercises.tex) to your computer.
 For each of the basic exercises, create a file named `ex_j.tex` for the j'th exercise and as its first line put
 
 ```tex
@@ -71,7 +72,7 @@ After defining nodes, you can draw lines between nodes like:
 
 where `a` and `b` are the names of nodes.
 
-2. Find out how to define your own `newcommand` (google is your friend) and create the command `reals`, which takes one argument, `n` and outputs 
+2. Find out how to define your own `newcommand` (google is your friend) and create the command `reals`, which takes one argument, `n` and outputs
 
 ![](img/newcommand.svg)
 
