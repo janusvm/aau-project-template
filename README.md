@@ -29,4 +29,3 @@ or by using [git](https://git-scm.com/):
 ```console
 git clone https://github.com/janusvm/aau-project-template.git
 ```
-

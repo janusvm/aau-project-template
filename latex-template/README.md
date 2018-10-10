@@ -27,7 +27,7 @@ The master document, `master.pdf`, includes a quick intro to some of the syntax 
    - `incl/misc/abstract.tex`
    - `incl/misc/titlepage.tex`
    - `master.tex`
-5. Start writing! 
+5. Start writing!
    - Put each chapter in its own file in `incl/main` and `\include` it in `master.tex`
    - Put packages and custom commands in `preamble.tex`
    - Customise `incl/misc/frontpage.tex` to make your project front page more interesting
@@ -79,4 +79,3 @@ If you work with data stored in e.g. CSV files, you might put them in a folder c
 
 While you _can_ put everything in one single folder, getting used to putting different types of files into different subdirectories can be a great help to keep the project organised, especially as the number of files grow.
 To reiterate: this structure reflects my subjective opinion, but feel free to adapt it to your liking.
-
