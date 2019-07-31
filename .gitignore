@@ -1,0 +1,5 @@
+# Build files
+build/
+
+# Intermediate template files
+*.mustache
