@@ -56,7 +56,7 @@
 {0em}
 {}
 
-% <&appendix>>
+% <<&appendix>>
 \let\appendixpagenameold\appendixpagename
 \renewcommand{\appendixpagename}{\color{AAUblue1}\appendixpagenameold}
 \xpatchcmd{\addappheadtotoc}{{chapter}}{{part}}{}{}
@@ -79,6 +79,13 @@
 \tikzstyle{edge}  = [fill=white,midway,inner sep=1pt]
 <</tikz>>
 <</figure>>
+
+<<#algorithms>>
+% <<&header>>
+% <<&description>>
+\floatname{algorithm}{<<&name>>}
+\renewcommand{\listalgorithmname}{<<&listname>>}
+<</algorithms>>
 
 <<#srccode>>
 % <<&header>>
