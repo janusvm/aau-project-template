@@ -1,0 +1,21 @@
+---
+header:
+  title: "makroer til at generere titelbladet"
+  description:
+    - line: "Lettere modificeret udgave af filen macros.tex fra"
+    - line: "https://github.com/jkjaer/aauLatexTemplates"
+aautitlepage:
+  description: "Genererer et AAU-tematiseret titelblad"
+  abstract: "Abstract"
+  disclaimer: "Rapportens indhold er frit tilgængeligt, men offentliggørelse (med kildeangivelse) må kun ske efter aftale med forfatterne."
+projectinfo:
+  description: "Indsæt projektinfo"
+  title: "Titel"
+  theme: "Tema"
+  period: "Projektperiode"
+  group: "Projektgruppe"
+  authors: "Deltager(e)"
+  supervisors: "Vejleder(e)"
+  pages: "Sidetal"
+  date: "Afleveringsdato"
+---

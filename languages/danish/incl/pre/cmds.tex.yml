@@ -1,0 +1,65 @@
+---
+header:
+  title: "brugerdefinerede makroer og blokke"
+  description:
+    - line: "Denne fil indeholder definitioner for egne makroer og blokke, der bruges som"
+    - line: "genvejsfunktioner for ofte brugte kommandoer og tekst i rapporten."
+math:
+  header: "Matematiske symboler ---------------------------------------------------------"
+  natural: "naturlige tal"
+  integer: "heltal"
+  rational: "rationelle tal"
+  real: "reelle tal"
+  complex: "komplekse tal"
+  indicator: "indikatorfunktion"
+  bigo: "store-O notation"
+  vec: "skriv vektorer med fed skrift"
+theorems:
+  header: "Sætninger o.lign. ------------------------------------------------------------"
+  plainstyle: "Titel med fed, tekst med skråskrift"
+  defstyle: "Title med fed, opretstående tekst"
+  thm:
+    name: "Sætning"
+    desc: "Sætninger, nummereret efter kapitel"
+  lem:
+    name: "Lemma"
+    desc: "Lemmaer, nummereret ligesom sætninger"
+  prop:
+    name: "Proposition"
+    desc: "Propositioner, nummereret ligesom sætninger"
+  cor:
+    name: "Korollar"
+    desc: "Korollarer, unnumbered"
+  defn:
+    name: "Definition"
+    desc: "Definitioner, nummereret ligesom sætninger"
+  exmp:
+    name: "Eksempel"
+    desc: "Eksempler, nummereret ligesom sætninger"
+figure:
+  header: "Figur-makroer ----------------------------------------------------------------"
+  imgfig:
+    description: "Makro til at indsætte et billede fra fig/img-mappen"
+    arglist:
+      - arg: "(valgfri) figurbredde; procent af sidebredde (standard: 0.75)"
+      - arg: "filnavn (uden fig/img/ eller filendelse); også brugt til label"
+      - arg: "figurteksten"
+    examplelist:
+      - ex: "\\imgfig{filnavn}{Figurteksten skrives her}"
+      - ex: "\\imgfig[0.5]{filnavn}{Figurteksten skrives her}"
+  dimgfig:
+    description: "Makro til at indsætte to billeder ved siden af hinanden"
+    arglist:
+      - arg: "(valgfri) breddefordeling (standard: 0.5, dvs. lige fordeling)"
+      - arg: "filnavn for den venstre figur, uden fig/img/ eller filendelse"
+      - arg: "billedtekst for den venstre figur"
+      - arg: "filnavn for den højre figur, uden fig/img/ eller filendelse"
+      - arg: "billedtekst for den højre figur"
+    examplelist:
+      - ex: "\\dimgfig{billede1}{Første billedtekst}{billede2}{Anden billedtekst}"
+      - ex: "\\dimgfig[0.3]{billede1}{Første billedtekst}{billede2}{Anden billedtekst}"
+    endnote: "Alterativt, se"
+misc:
+  argheader: "Argumenter"
+  exampleheader: "Eksempler"
+---

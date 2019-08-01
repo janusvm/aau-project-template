@@ -1,0 +1,55 @@
+---
+header:
+  title: "generelle indstillinger"
+  description:
+    - line: "Denne fil indeholder indstillinger for opsætningen af rapporten"
+colors:
+  header: "Brugerdefinerede farver ------------------------------------------------------"
+  description: "Officielle AAU-farver"
+fancyhdr:
+  header: "Sidehoved og sidefod ---------------------------------------------------------"
+  head:
+    clear: "ryd standardindhold"
+    lero: "venstre på lige sider, højre på ulige"
+    re: "højre på ulige sider"
+    lo: "venstre på ulige sider"
+  foot:
+    clear: "ryd standardindhold"
+    ceco: "centrerede sidetal"
+  style: "aktiver fancy stil"
+titlesec:
+  header: "Overskrifter -----------------------------------------------------------------"
+  chapter: "Kapitler vises med et tal i en farvet kasse"
+  part: "Dele skrives på to linjer"
+  appendix: "Juster titel og indholdsfortegnelsen mht. appendiks-siden"
+figure:
+  header: "Figurindstillinger -----------------------------------------------------------"
+  caption: "Indstillinger for figurtekst"
+  tikz:
+    libs:
+      desc: "Nyttige TiKZ-udvidelser"
+      arrows: "forskellige pilespidser"
+      calc: "udvidede beregninger med koordinater"
+    styles:
+      desc: "Prædefinerede styles til punkter og kanter i en graf"
+algorithms:
+  header: "Algoritmer -------------------------------------------------------------------"
+  description: "Indstillinger for algorithm-blokke"
+  name: "Algoritme"
+  listname: "Algoritmer"
+srccode:
+  header: "Kildekode --------------------------------------------------------------------"
+  description: "Syntax highlighting for Python-kode"
+  lstlistingname: "Kildekode"
+  lstlistlistingname: "Kildekode"
+autoref:
+  header: "Indstillinger for autoref ----------------------------------------------------"
+  part: "Del"
+  chapter: "Kapitel"
+  section: "Afsnit"
+  subsection: "Underafsnit"
+  figure: "Figur"
+  table: "Tabel"
+  algorithm: "Algoritme"
+  listing: "Kildekode"
+---
