@@ -1,0 +1,9 @@
+---
+header:
+  title: "indstillinger for Latexmk programmet"
+  description:
+    - line: "Latexmk er et Perl script, der automatisk kører alle de nødvendige programmer"
+    - line: "(pdflatex, bibtex, osv.) for at kompilere rapporten. Med denne konfigurations-"
+    - line: "fil kan master.pdf kompileres ved at køre `latexmk` i rodmappen."
+see: "Se"
+---

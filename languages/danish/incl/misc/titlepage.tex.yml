@@ -1,0 +1,13 @@
+---
+header:
+  title: "rapportens titelblad"
+  description:
+    - line: "Titelbladet genereres af makroen \\aautitlepage, som er defineret i"
+    - line: "/incl/pre/ext/aautitlepage.sty"
+pdfbookmark:
+  name: "Titelblad"
+  label: "titelblad"
+projectinfo:
+  group: "Gruppe"
+  dept: "Institut for Matematiske Fag"
+---

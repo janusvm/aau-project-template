@@ -1,0 +1,50 @@
+---
+header:
+  title: "pakker, som bruges i rapporten"
+  description:
+    - line: "Makroer distribueres i pakker, som kan indlæses med \\usepackage"
+base:
+  header: "Basis-pakker -----------------------------------------------------------------"
+  fontenc: "for at kunne vise visse tegn og bogstaver"
+  inputenc: "for at kunne læse visse tegn og bogstaver"
+  babel: "sprogindstillinger"
+  natbib: "litteraturhenvisninger"
+  hyperref: "diverse funktioner for links og referencer"
+  xpatch: "til patching af makroer"
+math:
+  header: "Matematik-pakker -------------------------------------------------------------"
+  mathtools: "matematik-makroer og blokke"
+  amssymb: "yderligere matematiske symbolder"
+  amsthm: "blokke til sætninger osv."
+  bbm: "udvidet 'blackboard bold' skriftstil"
+  bm: "bedre fed skrift for matematiske symboler"
+figure:
+  header: "Figur-pakker -----------------------------------------------------------------"
+  xcolor: "til farvet skrift"
+  graphicx: "billedhåndtering"
+  booktabs: "bedre tabeller"
+  caption: "indstillinger for billedtekst"
+  subcaption: "gruppering af flere billeder sammen"
+  tikz: "generer vektorgrafik med LaTeX-kode"
+  algorithm: "algoritme-figurer"
+  algpseudocode: "pseudokode"
+  listings: "visning af kildekode"
+styling:
+  header: "Styling-pakker ---------------------------------------------------------------"
+  microtype: "forbedret justering af tekst"
+  emptypage: "fjern sidetal på tomme sider"
+  fancyhdr: "indstillinger for sidehoved/-fod"
+  titlesec: "indstillinger for overskrifter"
+  geometry: "indstillinger for sidemargen"
+  appendix: "bedre appendicer"
+  background: "til at indsætte baggrundsbilleder"
+font:
+  header: "Skrifttyper ------------------------------------------------------------------"
+  fourier: "Adobe Utopia som primær skrifttype"
+  dejavusansmono: "DejaVu Sans Mono til bl.a. kildekode"
+thirdparty:
+  header: "Inkluderede tredjepartspakker ------------------------------------------------"
+  aautitlepage:
+    - line: "Pakken aautitlepage indholder modificerede makroer fra en tredjepart."
+    - line: "Se incl/pre/ext/aautitlepage.sty for detaljer"
+---

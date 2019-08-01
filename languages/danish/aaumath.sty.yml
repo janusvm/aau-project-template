@@ -1,0 +1,7 @@
+---
+header:
+  title: "preamble-pakke"
+  description:
+    - line: "Samler preamble-filerne i en samlet LaTeX-pakke"
+pkgdesc: "LaTeX preamble-pakke for AAU Matematik"
+---
