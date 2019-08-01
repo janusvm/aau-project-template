@@ -1,0 +1,8 @@
+---
+intro: "Mappen `incl/pre` indeholder det opdelte preamble;"
+filelist:
+  pkgs: "indlæser alle de brugte pakker"
+  cmds: "definerer egne makroer og blokke"
+  conf: "indeholder diverse indstillinger"
+  ext: "en mappe med tredjepartskode (dvs. LaTeX-makroer, som er skrevet af andre, og som ikke er tilgængelig i en pakke i almindelige LaTeX-distributioner)"
+---
