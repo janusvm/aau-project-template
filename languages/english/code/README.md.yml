@@ -1,2 +1,13 @@
 ---
+intro:
+  - line: "The `code` folder is for source code files, e.g. `.py` files, if you write scripts in Python."
+  - line: "If you write a lot of code for the project, you might want to further subdivide this folder."
+lstinputlisting:
+  before: "You can include source code from files using the `\\lstlistinginput` command, e.g."
+  after:
+    - line: "where the optional arguments `firstline` and `lastline` are given to display only part of the file."
+    - line: "The `label` argument requires you to also give the `caption` argument, as it otherwise doesn't work."
+    - line: "See <https://en.wikibooks.org/wiki/LaTeX/Source_Code_Listings> for more details."
+  filename: "filename"
+  caption: "Caption goes here"
 ---

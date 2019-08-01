@@ -1,8 +1,9 @@
 ## fig/tikz
 
-The `fig/tikz` folder is for `.tex` files (or `.tikz` files, if you prefer) with code for creating TiKZ figures.
+<<&intro>>
 
-For example, if you have a file named `fig/tikz/graph.tex` with the contents:
+<<#example>>
+<<&before>>
 
 ```latex
 \begin{figure}[htbp]
@@ -26,16 +27,18 @@ For example, if you have a file named `fig/tikz/graph.tex` with the contents:
     \draw (d) -- (z) node[edge] {6};
     \draw (e) -- (z) node[edge] {3};
   \end{tikzpicture}
-  \caption{Example graph from \citep{dmat}.}
-  \label{fig:graph}
+  \caption{<<&caption>>}
+  \label{fig:<<&label>>}
 \end{figure}
 ```
 
-then the figure can be included in the document with the simple line:
+<<&after>>
 
 ```latex
 \input{fig/tikz/graph}
 ```
+<</example>>
 
-Alternatively, if you need to use the TiKZ drawing in a setting where using a `figure` environment is not appropriate, you can just include the `\begin{tikzpicture} ... \end{tikzpicture}` part of the code and input where needed.
-For example, this is how the AAU logo is drawn on the front page, with TiKZ code from `fig/tikz/aau-badge.tex`.
+<<#endnote>>
+<<&line>>
+<</endnote>>

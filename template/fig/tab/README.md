@@ -1,33 +1,37 @@
 ## fig/tab
 
-The `fig/tab` folder is for `.tex` files with code for typesetting **tab**les.
+<<&intro>>
 
-For example, if you have a file named `fig/tab/envirs.tex` with the contents:
+<<#example>>
+<<&before>>
 
 ```latex
 \begin{table}[htbp]
   \centering
   \begin{tabular}{ll}
+<<#tab>>
     \toprule
-    \textbf{Environment} & \textbf{Function}               \\
+    \textbf{<<&environment>>} <<&spacer>>& \textbf{<<&function>>} \\
     \midrule
-    \texttt{document}    & Document contents               \\
-    \texttt{table}       & Floating table such as this one \\
-    \texttt{figure}      & Floating figure                 \\
-    \texttt{equation}    & Numbered equation               \\
-    \texttt{align}       & Aligned, multiple equations     \\
-    \texttt{itemize}     & Bulleted list                   \\
-    \texttt{enumerate}   & Numbered list                   \\
-    \texttt{description} & Descriptive list                \\
+    \texttt{document}    & <<&document>> \\
+    \texttt{table}       & <<&table>> \\
+    \texttt{figure}      & <<&figure>> \\
+    \texttt{equation}    & <<&equation>> \\
+    \texttt{align}       & <<&align>> \\
+    \texttt{itemize}     & <<&itemize>> \\
+    \texttt{enumerate}   & <<&enumerate>> \\
+    \texttt{description} & <<&description>> \\
     \bottomrule
+<</tab>>
   \end{tabular}
-  \caption{Common \LaTeX{} environments and their function}
-  \label{tab:my-table}
+  \caption{<<&caption>>}
+  \label{tab:<<&label>>}
 \end{table}
 ```
 
-then the table can be included in the document with the simple line:
+<<&after>>
 
 ```latex
 \input{fig/tab/envirs}
 ```
+<</example>>

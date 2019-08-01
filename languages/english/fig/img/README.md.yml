@@ -1,2 +1,39 @@
 ---
+intro: "The `fig/img` folder is for image files like PDFs, PNGs, JPGs, etc."
+example:
+  before: "These can be included in the document via the command `\\includegraphics`, e.g."
+  after: "where `imagefile` doesn't need to include the file extension."
+  filename: "imagefile"
+  caption: "Figure caption"
+commands:
+  title: "Custom commands for inputting images"
+  description: "Two handy shortcut commands are defined in `incl/pre/cmds.tex`:"
+  list:
+    imgfig: "for inserting a single image as a figure"
+    dimgfig: "for inserting two images as side-by-side figures"
+examples:
+  header: "Examples"
+  imgfig:
+    filename: "imagefile"
+    caption: "The image caption"
+    description1:
+      - line: "Insert a figure with a width of 75% of the page (within margins)"
+      - line: "The label of this figure is `fig:imagefile`"
+    description2:
+      - line: "The optional argument (in square brackets) controls this percentage"
+  dimgfig:
+    filename1: "imagefile1"
+    filename2: "imagefile2"
+    caption1: "Caption of first image"
+    caption2: "Caption of second image"
+    description1:
+      - line: "Insert two images as two side-by-side figures, with an even split"
+      - line: "Their labels are `fig:imagefile1` and `fig:imagefile2`"
+    description2:
+      - line: "The optional argument controls the split percentage"
+      - line: "Here, the left image will take up 30% of the page, and the right will take up 70%"
+endnote:
+  - line: "NB: these commands only work with image files."
+  - line: "For figures using e.g. TiKZ code, you need to use the `figure` environment manually."
+  - line: "See `fig/tikz/README.md` for examples of this."
 ---

@@ -1,8 +1,10 @@
 ## incl/app
 
-The `incl/app` folder is for `.tex` files with content for the appendices of the document.
+<<&intro>>
 
-Appendices are structured the same way as regular chapters, beginning with `\chapter{title}`, but by including them in the special `appendices` environment, they get put in a seperate part and enumerated with letters instead of numbers:
+<<#description>>
+<<&line>>
+<</description>>
 
 ```latex
 \begin{appendices}

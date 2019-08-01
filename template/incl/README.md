@@ -1,9 +1,11 @@
 ## incl
 
-The `incl` folder is for text files that are **incl**uded in the project, sorted into the subfolders:
+<<&intro>>
 
-- `main` for the main content
-- `app` for appendices
-- `misc` for formalities
-- `bib` for bibliography files
-- `pre` for preamble files
+<<#dirlist>>
+- `main` <<&main>>
+- `app` <<&app>>
+- `misc` <<&misc>>
+- `bib` <<&bib>>
+- `pre` <<&pre>>
+<</dirlist>>

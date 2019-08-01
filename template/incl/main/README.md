@@ -1,16 +1,20 @@
 ## incl/main
 
-The `incl/main` folder is for `.tex` files with the main contents of the document.
-Each file should begin with
+<<&intro>>
+<<#file>>
+<<&before>>
 
 ```latex
-\chapter{Chapter name}
-\label{ch:labelname}
+\chapter{<<&name>>}
+\label{ch:<<&label>>}
 ```
 
-and should only contain a single chapter.
+<<&after>>
+<</file>>
 
-Chapter files are included in the document with the `\include` command _after_ the `\mainmatter` command:
+<<#mainmatter>>
+<<&line>>
+<</mainmatter>>
 
 ```latex
 \mainmatter

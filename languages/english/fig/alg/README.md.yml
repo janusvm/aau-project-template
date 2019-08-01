@@ -1,2 +1,10 @@
 ---
+intro: "The `fig/alg` folder is for `.tex` files with **alg**orithm descriptions, which are typeset with the `algpseudocode` package."
+example:
+  before: "For example, if you have a file named `fig/alg/bubblesort.tex` with the contents:"
+  after: "then the algorithm can be included in the document with the simple line:"
+  argdesc: "real numbers with \\(n \\geq 2\\)"
+  swap: "swap \\(a_{j}\\) and \\(a_{j+1}\\)"
+  end: "are now in increasing order"
+  caption: "The bubble sort algorithm"
 ---
