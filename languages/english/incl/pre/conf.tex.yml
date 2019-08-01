@@ -32,6 +32,11 @@ figure:
       calc: "extended coordinate calculations"
     styles:
       desc: "Predefined TiKZ styles for drawing nodes and edge labels in a graph"
+algorithms:
+  header: "Algorithms -------------------------------------------------------------------"
+  description: "Settings for displaying algorithm floats"
+  name: "Algorithm"
+  listname: "List of Algorithms"
 srccode:
   header: "Source code style ------------------------------------------------------------"
   description: "Simple styling for Python source code"
