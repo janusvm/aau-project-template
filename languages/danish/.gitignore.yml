@@ -1,0 +1,7 @@
+---
+header:
+  title: "filer, som ikke skal versionsstyes med git"
+master:
+  - line: "Ignorer PDF-rapporten for at undgå almindelige merge conflicts til gengæld for"
+  - line: "at skulle kompilere den efter hver git pull"
+---
