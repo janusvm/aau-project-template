@@ -55,12 +55,15 @@
 {\huge\partname{} \thepart}
 {0em}
 {}
-
-% <<&appendix>>
-\let\appendixpagenameold\appendixpagename
-\renewcommand{\appendixpagename}{\color{AAUblue1}\appendixpagenameold}
-\xpatchcmd{\addappheadtotoc}{{chapter}}{{part}}{}{}
 <</titlesec>>
+
+<<#appendix>>
+% <<&description>>
+\renewcommand{\appendixname}{<<&name>>}
+\renewcommand{\appendixtocname}{<<&tocname>>}
+\renewcommand{\appendixpagename}{\textcolor{AAUblue1}{<<&pagename>>}}
+\xpatchcmd{\addappheadtotoc}{{chapter}}{{part}}{}{}
+<</appendix>>
 
 <<#figure>>
 % <<&header>>
