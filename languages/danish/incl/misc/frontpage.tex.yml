@@ -1,0 +1,12 @@
+---
+header:
+  title: "rapportens forside"
+pdfbookmark:
+  name: "Forside"
+  label: "forside"
+badge: "AAU-segl"
+main:
+  desc: "Hovedindhold"
+  project: "-Projekt"
+  group: "Gruppe"
+---
