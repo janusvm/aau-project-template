@@ -1,0 +1,50 @@
+---
+header:
+  title: "package configurations"
+  description:
+    - line: "This file includes customisations for setting up the document"
+colors:
+  header: "Custom colors ----------------------------------------------------------------"
+  description: "Official AAU color palette"
+fancyhdr:
+  header: "Headers and footers ----------------------------------------------------------"
+  head:
+    clear: "clear default header fields"
+    lero: "left on even and right on odd"
+    re: "right on even"
+    lo: "left on odd"
+  foot:
+    clear: "clear default footer fields"
+    ceco: "centered page numbers"
+  style: "activate fancy style"
+titlesec:
+  header: "Section titles ---------------------------------------------------------------"
+  chapter: "Format chapter title style with a boxed number"
+  part: "Format part title styles to be on two lines"
+  appendix: "Adjust title and TOC settings of the appendix page"
+figure:
+  header: "Figure settings --------------------------------------------------------------"
+  caption: "Format captions"
+  tikz:
+    libs:
+      desc: "Useful TiKZ libraries"
+      arrows: "customisable arrow tips"
+      calc: "extended coordinate calculations"
+    styles:
+      desc: "Predefined TiKZ styles for drawing nodes and edge labels in a graph"
+srccode:
+  header: "Source code style ------------------------------------------------------------"
+  description: "Simple styling for Python source code"
+  lstlistingname: "Listing"
+  lstlistlistingname: "List of Listings"
+autoref:
+  header: "Autoref settings -------------------------------------------------------------"
+  part: "Part"
+  chapter: "Chapter"
+  section: "Section"
+  subsection: "Subsection"
+  figure: "Figure"
+  table: "Table"
+  algorithm: "Algorithm"
+  listing: "Listing"
+---

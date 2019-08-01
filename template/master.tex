@@ -1,77 +1,90 @@
-% master.tex : master file for the project
+<<#header>>
+% master.tex : <<&title>>
 % ------------------------------------------------------------------------------
-% This is the main file in the project, which collects the contents from all the
-% input files (text, images, literature databases, etc.).
+<<#description>>
+% <<&line>>
+<</description>>
+<</header>>
 
+<<#documentclass>>
+% <<&description>>
+% <<&see>> https://tex.stackexchange.com/a/36989/118167
+\documentclass[11pt,a4paper,twoside,openright,<<lang>>]{book}
+<</documentclass>>
 
-% The 'book' class is a document class with many flexible options.
-% See https://tex.stackexchange.com/a/36989/118167
-\documentclass[11pt,a4paper,twoside,openright,english]{book}
-
-% Some top level variables that are used to automatically input title, authors,
-% etc. in the title page and front page.
-\def \projecttitle       {Project Main Title}
-\def \projectsubtitle    {Project Subtitle}
-\def \projecttheme       {Project Theme}
-\def \projectdegree      {Mathematics}  % or Mathematics-Economics/Technology
-\def \projectperiod      {Fall Semester 20XX}
+<<#variables>>
+<<#description>>
+% <<&line>>
+<</description>>
+\def \projecttitle       {<<&title>>}
+\def \projectsubtitle    {<<&subtitle>>}
+\def \projecttheme       {<<&theme>>}
+\def \projectdegree      {<<&degree>>}  % <<&degreealt>>
+\def \projectperiod      {<<&period>>}
 \def \projectnumber      {P1}
 \def \projectgroup       {X123}
 \def \projectauthors     {
-  Project Author 1\\
-  Project Author 2\\
-  Project Author 3\\
-  Project Author 4
+  <<&author>> 1\\
+  <<&author>> 2\\
+  <<&author>> 3\\
+  <<&author>> 4
   % ...
 }
 \def \projectsupervisors {
-  Project Supervisor 1\\
-  Project Supervisor 2
+  <<&supervisor>> 1\\
+  <<&supervisor>> 2
   % ...
 }
+<</variables>>
 
-% The preamble, i.e. all the settings and commands that go before actual
-% document contents, in this template is handled in the single file aaumath.sty,
-% which defines a package that can be loaded here with \usepackage.
+<<#preamble>>
+% <<&line>>
+<</preamble>>
 \usepackage{aaumath}
 
-% All contents of the document go between the \begin and \end commands for the
-% 'document' environment.
+<<#document>>
+% <<&line>>
+<</document>>
 \begin{document}
 
-% The front matter is not counted in the numbered pages and are instead numbered
-% with roman numerals. This consists of, for example, the front page, title
-% page, preface, and table of contents.
+<<#frontmatter>>
+% <<&line>>
+<</frontmatter>>
 \frontmatter
 \include{incl/misc/frontpage}
 \include{incl/misc/titlepage}
 \include{incl/misc/contents}
 
-% The main matter is were the bulk of your work goes. Pages and headings have
-% arabic numbers.
+<<#mainmatter>>
+% <<&line>>
+<</mainmatter>>
 \mainmatter
 
-% Input files should be partitioned such that each file corresponds to one
-% chapter. The \include command forces a page break and inserts the contents of
-% the input file.
+<<#input>>
+% <<&line>>
+<</input>>
 
 % \include{incl/main/example1}
 % \include{incl/main/example2}
 % ...
 
-% Appendices are included inside an appendices block, which enumerates chapters
-% with letters, starting from A, instead of numbers.
+<<#appendices>>
+% <<&line>>
+<</appendices>>
 \begin{appendices}
   % \include{incl/app/appendix1}
   % \include{incl/app/appendix2}
   % ..
 \end{appendices}
 
-% The backmatter is for extra stuff. Headings are not numbered.
+<<#backmatter>>
+% <<&line>>
+<</backmatter>>
 \backmatter
 
-% Automatic list of references, based on which references in the literature
-% database files were referenced throughout the document.
+<<#bibliography>>
+% <<&line>>
+<</bibliography>>
 \bibliographystyle{apalike}
 \bibliography{
   incl/bib/books,

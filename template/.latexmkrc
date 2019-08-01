@@ -1,10 +1,12 @@
-# .latexmkrc : settings for the Latexmk build system
+<<#header>>
+# .latexmkrc : <<&title>>
 # ------------------------------------------------------------------------------
-# Latexmk is a Perl script for automatically running all the programs needed
-# (pdflatex, bibtex, etc.) for compiling your document. With this configuration
-# file, the master PDF is compiled by running `latexmk` in the root folder.
+<<#description>>
+# <<&line>>
+<</description>>
+<</header>>
 #
-# See
+# <<&see>>
 # * https://mg.readthedocs.io/latexmk.html
 # * http://personal.psu.edu/jcc8//software/latexmk/latexmk-430a.txt
 

@@ -1,22 +1,25 @@
-% incl/misc/contents.tex : table of contents and various lists
+<<#header>>
+% incl/misc/contents.tex :
 % ------------------------------------------------------------------------------
+<</header>>
 
+<<#pdfbookmark>>
+\pdfbookmark[0]{<<&name>>}{<<&label>>}
+<</pdfbookmark>>
 
-\pdfbookmark[0]{Contents}{contents}
-
-% The settings in this file are grouped so they only apply here
+% <<&group>>
 \begingroup
 
-% Temporarily disable twoside layout to avoid blank pages in this section
+% <<&twoside>>
 \makeatletter
 \@twosidefalse
 \makeatother
 
-% Put table of contents on its own page (best for a TOC that fits on one page)
+% <<&toc>>
 \tableofcontents
 \clearpage
 
-% Put the lists on subsequent pages without page breaks
+% <<&lists>>
 \let\clearpage\relax
 \listoffigures
 \listoftables

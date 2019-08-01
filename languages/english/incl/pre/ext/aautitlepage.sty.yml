@@ -1,0 +1,21 @@
+---
+header:
+  title: "macros for generating the title page"
+  description:
+    - line: "Slightly modified version of the file aautitlepage macros from"
+    - line: "https://github.com/jkjaer/aauLatexTemplates"
+aautitlepage:
+  description: "Creates the AAU titlepage"
+  abstract: "Abstract"
+  disclaimer: "The content of this report is freely available, but publication (with reference) may only be pursued due to agreement with the authors."
+projectinfo:
+  description: "Create project info"
+  title: "Title"
+  theme: "Theme"
+  period: "Project Period"
+  group: "Project Group"
+  authors: "Participant(s)"
+  supervisors: "Supervisor(s)"
+  pages: "Page Numbers"
+  date: "Date of Completion"
+---
