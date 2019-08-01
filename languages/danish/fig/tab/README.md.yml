@@ -1,0 +1,20 @@
+---
+intro: "Mappen `fig/tab` er til `.tex`-filer med kode til at lavel **tab**eller."
+example:
+  before: "For eksempel, hvis man har en fil kaldet `fig/tab/envirs.tex` med indholdet:"
+  after: "så kan tabellen indsættes i dokumentet ved at skrive:"
+  caption: "Almindelige \\LaTeX{}-blokke og deres funktion"
+  label: "tabel"
+  tab:
+    environment: "Blok"
+    spacer: "       "
+    function: "Funktion"
+    document: "Dokumentindhold"
+    table: "Tabeller såsom denne"
+    figure: "Figurer"
+    equation: "Nummererede ligninger"
+    align: "Flere ligninger sammen"
+    itemize: "Punktliste"
+    enumerate: "Nummereret liste"
+    description: "Beskrivelsesliste"
+---

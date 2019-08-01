@@ -1,0 +1,11 @@
+---
+intro: "The `fig/tikz` folder is for `.tex` files (or `.tikz` files, if you prefer) with code for creating TiKZ figures."
+example:
+  before: "For example, if you have a file named `fig/tikz/graph.tex` with the contents:"
+  after: "then the figure can be included in the document with the simple line:"
+  caption: "Example graph from \\citep{dmat}."
+  label: "graph"
+endnote:
+  - line: "Alternatively, if you need to use the TiKZ drawing in a setting where using a `figure` environment is not appropriate, you can just include the `\\begin{tikzpicture} ... \\end{tikzpicture}` part of the code and input where needed."
+  - line: "For example, this is how the AAU logo is drawn on the front page, with TiKZ code from `fig/tikz/aau-badge.tex`."
+---

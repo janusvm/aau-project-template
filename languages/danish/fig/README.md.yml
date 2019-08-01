@@ -1,0 +1,18 @@
+---
+intro:
+  - line: "Mappen `fig` er for indhold til **fig**urer og andre blokke:"
+  - line: "billeder, tabeller, pseudokode for algoritmer, TiKZ-kode, osv."
+envlist:
+  description: "Hver type af indhold har sin egen undermappe:"
+  alg: "for pseudokode for algoritmer"
+  img: "for billedfiler"
+  tab: "for tabelindhold"
+  tikz: "for TiKZ-kode"
+why:
+  title: "Hvorfor have separate filer til dette?"
+  body:
+    - line: "Selvom man sagtens kan skrive alle makroerne for at lave f.eks. en tabel direkte i hovedfilerne, så gør det dokumentet lettere at holde styr på ved at opdele det."
+    - line: ""
+    - line: "Ved at have al LaTeX-koden til at generere en float i sin egen fil, kan man let flytte den til et andet sted i dokumentet eller kommentere den ud ifm. fejldiagnosticering."
+    - line: "Det gør det også nemmere at holde styr på ændringer til en bestemt float gennem git-historikken."
+---

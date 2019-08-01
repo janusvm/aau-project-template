@@ -1,0 +1,12 @@
+---
+header:
+  title: "document front page"
+pdfbookmark:
+  name: "Front page"
+  label: "frontpage"
+badge: "AAU badge"
+main:
+  desc: "Main contents"
+  project: " Project"
+  group: "Group"
+---

@@ -1,0 +1,13 @@
+---
+intro:
+  - line: "Mappen `code` er til kildekodefiler som f.eks. `.py`-filer, hvis du skriver scripts i Python."
+  - line: "Hvis du skriver meget kode til projektet, bør du måske yderligere opdele mappen i undermapper."
+lstinputlisting:
+  before: "Du kan inkludere kildekode fra filer med `\\lstlistinginput`-makroen, f.eks."
+  after:
+    - line: "hvor de valgfrie argumenter `firstline` og `lastline` bruges til kun at inkludere dele af filen."
+    - line: "For at bruge `label`-argumentet, skal `caption` også gives, ellers virker det ikke."
+    - line: "Se <https://en.wikibooks.org/wiki/LaTeX/Source_Code_Listings> for flere detaljer."
+  filename: "filnavn"
+  caption: "Forklarende tekst her"
+---

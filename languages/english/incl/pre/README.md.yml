@@ -1,0 +1,8 @@
+---
+intro: "The `incl/pre` folder contains the modularised preamble;"
+filelist:
+  pkgs: "loads all the packages used"
+  cmds: "defines custom commands and environments"
+  conf: "holds various configurations"
+  ext: "a folder for bundled, external code (i.e. LaTeX macros authored by someone else which isn't available as a package in the usual TeX distributions)"
+---

@@ -1,0 +1,11 @@
+---
+header:
+  title: "indholdsfortegnelsen og forskellige oversigtslister"
+pdfbookmark:
+  name: "Indhold"
+  label: "indhold"
+group: "Indstillingerne i denne fil er grupperet, så de ikke påvirker andre dele"
+twoside: "Slå twoside fra midlertidigt for at undgår sideskift"
+toc: "Placer indholdsfortegnelsen på sin egen side (bedst når den kun fylder en side)"
+lists: "Placer oversigtslisterne på efterfølgende sider"
+---

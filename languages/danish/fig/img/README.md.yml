@@ -1,0 +1,39 @@
+---
+intro: "Mappen `fig/img` er til billedfiler som PDF, PNG, JPG, osv."
+example:
+  before: "Disse kan indsættes i dokumentet via kommandoen `\\includegraphics`, f.eks."
+  after: "hvor `billedfil` ikke behøver at inkludere filendelsen."
+  filename: "billedfil"
+  caption: "Figurtekst"
+commands:
+  title: "Makroer for at indsætte billeder"
+  description: "To nyttige makroer til figurer er defineret i `incl/pre/cmds.tex`:"
+  list:
+    imgfig: "for at indsætte et enkelt billede som figur"
+    dimgfig: "for at indsætte to billeder ved siden af hinanden"
+examples:
+  header: "Eksempler"
+  imgfig:
+    filename: "billedfil"
+    caption: "Billedteksten"
+    description1:
+      - line: "Indsæt en figur med en bredde på 75% af siden (inden for margener)"
+      - line: "Figurens label er `fig:billedfil`"
+    description2:
+      - line: "Det valgfrie argument (i kantede parenteser) sætter denne procentdel"
+  dimgfig:
+    filename1: "billedfil1"
+    filename2: "billedfil2"
+    caption1: "Første figurtekst"
+    caption2: "Anden figurtekst"
+    description1:
+      - line: "Indsæt to lige brede figurer side om side"
+      - line: "Deres labels er `fig:billedfil1` og `fig:billedfil2`"
+    description2:
+      - line: "Det valgfrie argument styrer opdelingen af sidebredden"
+      - line: "Her vil den ventre figur fylde 30% af siden, og den højre vil fylde 70%"
+endnote:
+  - line: "NB: disse makroer virker kun med billedfiler."
+  - line: "For figurer med f.eks. TiKZ-kode, skal man bruge `figure`-blokken manuelt."
+  - line: "Se `fig/tikz/README.md` for eksempler på dette."
+---

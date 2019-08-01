@@ -1,0 +1,49 @@
+---
+header:
+  title: "master-fil for projektet"
+  description:
+    - line: "Dette er hovedfilen for projektet, hvori indhold fra alle input-filer (tekst,"
+    - line: "billeder, litteraturdatabaser, osv.) samles"
+documentclass:
+  description: "Dokumenttypen 'book' er valgt pga. dens mange fleksible indstillinger"
+  see: "Se"
+  lang: "danish"
+variables:
+  description:
+    - line: "Variabler, som bruges til automatisk at indsætte titel, forfattere, osv. på"
+    - line: "forsiden og titelbladet."
+  title: "Projekttitel"
+  subtitle: "Projektundertitel"
+  theme: "Projekttema"
+  degree: "Matematik"
+  degreealt: "eller Matematik-Økonomi/Teknologi"
+  period: "Efterårssemesteret 20XX"
+  author: "Projektforfatter"
+  supervisor: "Projektvejleder"
+preamble:
+  - line: "Preamblet indeholder alle de indstillinger og makroer, som skal indsættes for"
+  - line: "hovedindholdet, og i denne skabelon samles det i filen aaumath.sty, som"
+  - line: "definerer en pakke, der kan indlæses med \\usepackage."
+document:
+  - line: "Dokumentets indhold indsættes mellem \\begin- og \\end-makroerne for"
+  - line: "'document'-blokken"
+frontmatter:
+  - line: "Dokumentets 'front matter' tælles ikke med ifm. antal sider og nummereres med"
+  - line: "romerske tal. Herunder hører f.eks. forsiden, titelbladet, forordet og"
+  - line: "indholdsfortegnelsen."
+mainmatter:
+  - line: "Dokumentets 'main matter' (hovedindhold) er der, hvor det meste indhold skal"
+  - line: "sættes ind. Sider og overskrifter er nummererede med arabiske tal."
+input:
+  - line: "Input-filer bør opdeles således, at hver fil svarer til et kapitel. Makroen"
+  - line: "\\include indsætter et sideskift og indholdet fra den givne stil."
+appendices:
+  - line: "Appendicer indsættes inde i en appendices-blok og bliver nummereret med"
+  - line: "bogstaver i stedet for tal"
+backmatter:
+  - line: "Dokumentets 'back matter' er til ekstra ting som f.eks. litteraturlisten."
+  - line: "Overskrifter bliver ikke nummereret her."
+bibliography:
+  - line: "Automatisk litteraturliste baseret på, hvilke kilder, der er blevet refereret"
+  - line: "til i løbet af rapporten."
+---

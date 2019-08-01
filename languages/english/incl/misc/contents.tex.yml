@@ -1,0 +1,11 @@
+---
+header:
+  title: "table of contents and various lists"
+pdfbookmark:
+  name: "Contents"
+  label: "contents"
+group: "The settings in this file are grouped so they only apply here"
+twoside: "Temporarily disable twoside layout to avoid blank pages in this section"
+toc: "Put table of contents on its own page (best for a TOC that fits on one page)"
+lists: "Put the lists on subsequent pages without page breaks"
+---

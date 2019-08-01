@@ -1,0 +1,14 @@
+---
+title: "LaTeX Projektskabelon"
+intro:
+  - line: "Dette repository indeholder en LaTeX-skabelon lavet specielt til studerende på AAUs Institut for Matematiske Fag."
+instructions:
+  header: "For at komme i gang:"
+  ol:
+    - li: "1. Opret en GitHub-konto og log ind"
+    - li: "2. Gå til dette repository på GitHub (https://github.com/janusvm/aau-project-template-danish)"
+    - li: "3. Klik på den grønne **Use this template**-knap nær toppen af siden"
+    - li: "4. Udfyld detaljerne, og sæt det nye repository til **Private**"
+    - li: "5. Gå til **Settings → Collaborators** og tilføj dine gruppemedlemmer"
+    - li: "6. Klon repository'et til din computer og begynd at skrive!"
+---

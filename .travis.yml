@@ -1,0 +1,13 @@
+language: ruby
+script: make all
+deploy:
+  skip_cleanup: true
+  provider: script
+  script: bash deploy.sh
+  on:
+    branch: master
+branches:
+  only: master
+env:
+  global:
+    secure: NamlV1pHMjE6rFz0v2a3QKuAXfx5OgATV84wqxG+N24WKvOt4b4mDWzPwmMW7uP+I+9MjnX1igXInQviaLv7cLw6yTDgbVafO7NYSI4hozr0ZX2Gc+KJGSC7xUToW9uMvYILZ1w7eujg8YAhpEwTol8Ox2vz2CgTsPFrx0etpTs7RbSeRH1XrZOblqg0528zI/z4RZakSYrxRK2PeWYfZZ88AaqIULwE8zcR2lgZH1J5u4vx/xFrWheWI06sLH85FNuUbNZyG6LEO1/cNVkxrGGXLUkOvLX5fJnBK4djNh3NcL0OGsuuRGFfSeq8wHjbLTV/ipYbHToDdqcbXPDbIqrtsCBAjZsVcc1YqhpZ4hT+K3XVR4bT4Sh31xndOv6kPy5IwHYKAiEYxTs0wQqNDbUGot9k8RcR1A5Qw+eR90JhVcFFcGqCliLujnM0DAaBECF+mVCMdkHXlbWNwxRAKwniecXJIxcT8waNHuF7qbVRpvLyNwfVwRsKq8+ALZesl2e3Q8HGunrg55zFEzl2uV25NqGroNAkrmUy1WZYXbdWpwNwI4qWyj5gD3SPU7IB+oLiWzQ99nI6kMd4DupJdH9bMtkTRaPGQOhLnS3U1/bjM3ieQg3hJWyg0eSZ2uhIoS1junl0rZ/A16T7LDQWjW2bOAqQ9+H4Zh0uY28cesg=

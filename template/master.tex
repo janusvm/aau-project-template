@@ -1,0 +1,95 @@
+<<#header>>
+% master.tex : <<&title>>
+% ------------------------------------------------------------------------------
+<<#description>>
+% <<&line>>
+<</description>>
+<</header>>
+
+<<#documentclass>>
+% <<&description>>
+% <<&see>> https://tex.stackexchange.com/a/36989/118167
+\documentclass[11pt,a4paper,twoside,openright,<<lang>>]{book}
+<</documentclass>>
+
+<<#variables>>
+<<#description>>
+% <<&line>>
+<</description>>
+\def \projecttitle       {<<&title>>}
+\def \projectsubtitle    {<<&subtitle>>}
+\def \projecttheme       {<<&theme>>}
+\def \projectdegree      {<<&degree>>}  % <<&degreealt>>
+\def \projectperiod      {<<&period>>}
+\def \projectnumber      {P1}
+\def \projectgroup       {X123}
+\def \projectauthors     {
+  <<&author>> 1\\
+  <<&author>> 2\\
+  <<&author>> 3\\
+  <<&author>> 4
+  % ...
+}
+\def \projectsupervisors {
+  <<&supervisor>> 1\\
+  <<&supervisor>> 2
+  % ...
+}
+<</variables>>
+
+<<#preamble>>
+% <<&line>>
+<</preamble>>
+\usepackage{aaumath}
+
+<<#document>>
+% <<&line>>
+<</document>>
+\begin{document}
+
+<<#frontmatter>>
+% <<&line>>
+<</frontmatter>>
+\frontmatter
+\include{incl/misc/frontpage}
+\include{incl/misc/titlepage}
+\include{incl/misc/contents}
+
+<<#mainmatter>>
+% <<&line>>
+<</mainmatter>>
+\mainmatter
+
+<<#input>>
+% <<&line>>
+<</input>>
+
+% \include{incl/main/example1}
+% \include{incl/main/example2}
+% ...
+
+<<#appendices>>
+% <<&line>>
+<</appendices>>
+\begin{appendices}
+  % \include{incl/app/appendix1}
+  % \include{incl/app/appendix2}
+  % ..
+\end{appendices}
+
+<<#backmatter>>
+% <<&line>>
+<</backmatter>>
+\backmatter
+
+<<#bibliography>>
+% <<&line>>
+<</bibliography>>
+\bibliographystyle{apalike}
+\bibliography{
+  incl/bib/books,
+  incl/bib/articles,
+  incl/bib/software
+}
+
+\end{document}

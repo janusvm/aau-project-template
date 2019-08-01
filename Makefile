@@ -1,48 +1,52 @@
-# Top level Makefile
-# --------------------------------------------------------------------------------------------------
+# Makefile for generating LaTeX templates from language files
+# ------------------------------------------------------------------------------
 
-TEMPLATES := $(shell find latex-template -mindepth 1 -maxdepth 1 -type d)
-RMDS := $(wildcard resources/*.Rmd)
-PDFS := $(RMDS:.Rmd=.pdf)
-GIT_STATUS = $(shell (git status --porcelain | grep -q .) && echo dirty || echo clean)
 
-# --------------------------------------------------------------------------------------------------
+# Directories
+DATADIR    = languages
+TMPLDIR    = template
+BUILDDIR   = build
+LANGS     := $(shell ls $(DATADIR))
 
-all: latex notes
+# Template files
+TMPLFILES := $(shell find $(TMPLDIR) -type f)
+MUSTFILES := $(filter %.mustache,$(TMPLFILES))
+TMPLFILES := $(filter-out $(MUSTFILES),$(TMPLFILES))
 
-release:
-ifeq ($(GIT_STATUS), clean)
-	$(MAKE) clean-build
-	mkdir -p build
-	for dir in $(TEMPLATES); do \
-		$(MAKE) -C $$dir release; \
-		(cd $$dir && zip -r - . -x Makefile) > build/`basename $$dir`-with-examples.zip; \
-		$(MAKE) -C $$dir bare; \
-		(cd $$dir && zip -r - . -x Makefile) > build/`basename $$dir`-bare.zip; \
-	done
-	git checkout .
-else
-	$(error working tree dirty, build aborted!)
-endif
+# Rules ------------------------------------------------------------------------
+all: $(LANGS)
 
-latex:
-	for dir in $(TEMPLATES); do \
-		$(MAKE) -C $$dir; \
-	done
+# Function for generating appropriate variables and rules for each language
+define LANGRULES =
+TEXTFILES := $$(patsubst $$(TMPLDIR)/%,$$(BUILDDIR)/$(1)/%,$$(TMPLFILES))
+EPSFILES  := $$(shell find $$(DATADIR)/$(1) -name "*.eps")
+PDFFILES  := $$(patsubst $$(DATADIR)/$(1)/%.eps,$$(BUILDDIR)/$(1)/%.pdf,$$(EPSFILES))
 
-notes: $(PDFS)
+$(1): $$(TEXTFILES) $$(PDFFILES)
 
-%.pdf: %.Rmd
-	cd resources
-	Rscript --slave --vanilla -e "rmarkdown::render('$(<F)')"
+$$(TEXTFILES): $$(BUILDDIR)/$(1)/%: $$(DATADIR)/$(1)/%.yml $$(TMPLDIR)/%.mustache
+	@echo "Generating $$@"
+	@mkdir -p $$(@D)
+	mustache $$^ > $$@
 
-clean-build:
-	rm -f build/*
+$$(PDFFILES): $$(BUILDDIR)/$(1)/%.pdf: $$(DATADIR)/$(1)/%.eps
+	epstopdf $$< $$@
 
-clean: clean-build
-	rm -f $(PDFS)
-	for dir in $(TEMPLATES); do \
-		$(MAKE) -C $$dir clean; \
-	done
+.PHONY: $(1)
+endef
 
-.PHONY: all release latex notes clean-build clean
+$(foreach LANG,$(LANGS),$(eval $(call LANGRULES,$(LANG))))
+
+# Prepend delimiter settings to each template file via an intermediate file
+%.mustache: %
+	@cat <<EOF > $@
+	{{=<< >>=}}
+	`cat $<`
+	EOF
+
+clean:
+	rm -rf $(BUILDDIR)
+	rm -f $(MUSTFILES)
+
+.PHONY: all clean
+.ONESHELL:

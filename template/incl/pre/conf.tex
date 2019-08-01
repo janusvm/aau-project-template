@@ -1,0 +1,124 @@
+<<#header>>
+% incl/pre/conf.tex : <<&title>>
+% ------------------------------------------------------------------------------
+<<#description>>
+% <<&line>>
+<</description>>
+<</header>>
+
+
+<<#colors>>
+% <<&header>>
+% <<&description>>
+% https://www.design.aau.dk/om-aau-design/Farver/
+\definecolor{AAUblue1}{RGB}{ 33, 26, 82}
+\definecolor{AAUblue2}{RGB}{ 89, 79,191}
+\definecolor{AAUgrey1}{RGB}{ 84, 97,110}
+\definecolor{AAUgrey2}{RGB}{104,119,132}
+\definecolor{AAUgrey3}{RGB}{162,172,182}
+\definecolor{AAUgrey4}{RGB}{222,223,226}
+\definecolor{AAUgreen}{RGB}{157,187, 29}
+\definecolor{AAUteal} {RGB}{ 94,150,149}
+\definecolor{AAUred}  {RGB}{223,103, 82}
+<</colors>>
+
+<<#fancyhdr>>
+% <<&header>>
+% http://mirrors.dotsrc.org/ctan/macros/latex/contrib/fancyhdr/fancyhdr.pdf
+\fancyhead{}                            % <<&head.clear>>
+\fancyhead[LE,RO]{Group \projectgroup}  % <<&head.lero>>
+\fancyhead[RE]{\leftmark}               % <<&head.re>>
+\fancyhead[LO]{\rightmark}              % <<&head.lo>>
+\fancyfoot{}                            % <<&foot.clear>>
+\fancyfoot[CE,CO]{\thepage}             % <<&foot.ceco>>
+\pagestyle{fancy}                       % <<&style>>
+<</fancyhdr>>
+
+<<#titlesec>>
+% <<&header>>
+% http://mirrors.dotsrc.org/ctan/macros/latex/contrib/titlesec/titlesec.pdf
+
+% <<&chapter>>
+\titleformat
+{\chapter}
+[hang]
+{\Huge\bfseries\color{white}}
+{\colorbox{AAUblue1}{\makebox[30pt]{\strut\thechapter}}}
+{0.5em}
+{\Huge\bfseries\color{AAUblue1}}
+
+% <<&part>>
+\titleformat
+{\part}
+[display]
+{\Huge\bfseries\color{AAUblue1}\filcenter}
+{\huge\partname{} \thepart}
+{0em}
+{}
+<</titlesec>>
+
+<<#appendix>>
+% <<&description>>
+\renewcommand{\appendixname}{<<&name>>}
+\renewcommand{\appendixtocname}{<<&tocname>>}
+\renewcommand{\appendixpagename}{\textcolor{AAUblue1}{<<&pagename>>}}
+\xpatchcmd{\addappheadtotoc}{{chapter}}{{part}}{}{}
+<</appendix>>
+
+<<#figure>>
+% <<&header>>
+% <<&caption>>
+% http://mirrors.dotsrc.org/ctan/macros/latex/contrib/caption/caption-eng.pdf
+\captionsetup{font=it,labelfont=bf}
+
+<<#tikz>>
+% <<&libs.desc>>
+% https://tex.stackexchange.com/q/42611
+\usetikzlibrary{arrows.meta}  % <<&libs.arrows>>
+\usetikzlibrary{calc}         % <<&libs.calc>>
+
+% <<&styles.desc>>
+\tikzstyle{point} = [fill,shape=circle,minimum size=3pt,inner sep=0pt]
+\tikzstyle{edge}  = [fill=white,midway,inner sep=1pt]
+<</tikz>>
+<</figure>>
+
+<<#algorithms>>
+% <<&header>>
+% <<&description>>
+\floatname{algorithm}{<<&name>>}
+\renewcommand{\listalgorithmname}{<<&listname>>}
+<</algorithms>>
+
+<<#srccode>>
+% <<&header>>
+% <<&description>>
+% https://en.wikibooks.org/wiki/LaTeX/Source_Code_Listings
+\lstdefinestyle{custompy}{
+  belowcaptionskip=\baselineskip,
+  breaklines=true,
+  language=Python,
+  showstringspaces=false,
+  basicstyle=\footnotesize\ttfamily,
+  keywordstyle=\bfseries\color{AAUblue1},
+  commentstyle=\itshape\color{AAUgrey3},
+  identifierstyle=\color{AAUblue2},
+  stringstyle=\color{AAUteal},
+}
+\lstset{language=Python,style=custompy,captionpos=b}
+\renewcommand{\lstlistingname}{<<&lstlistingname>>}
+\renewcommand{\lstlistlistingname}{<<&lstlistlistingname>>}
+<</srccode>>
+
+<<#autoref>>
+% <<&header>>
+% https://en.wikibooks.org/wiki/LaTeX/Labels_and_Cross-referencing#autoref
+\def\partautorefname{<<&part>>}
+\def\chapterautorefname{<<&chapter>>}
+\def\sectionautorefname{<<&section>>}
+\def\subsectionautorefname{<<&subsection>>}
+\def\figureautorefname{<<&figure>>}
+\def\tableautorefname{<<&table>>}
+\def\algorithmautorefname{<<&algorithm>>}
+\def\lstinputlistingautorefname{<<&listing>>}
+<</autoref>>

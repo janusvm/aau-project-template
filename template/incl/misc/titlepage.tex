@@ -1,0 +1,38 @@
+<<#header>>
+% incl/misc/titlepage.tex : <<&title>>
+% ------------------------------------------------------------------------------
+<<#description>>
+% <<&line>>
+<</description>>
+<</header>>
+
+
+<<#pdfbookmark>>
+\pdfbookmark[0]{<<&name>>}{<<&label>>}
+<</pdfbookmark>>
+<<#projectinfo>>
+\aautitlepage{
+  \projectinfo{
+    \projecttitle
+  }{
+    \projecttheme
+  }{
+    \projectperiod
+  }{
+    <<&group>> \projectgroup
+  }{
+    \parbox[t]{\textwidth}{\projectauthors}
+  }{
+    \parbox[t]{\textwidth}{\projectsupervisors}
+  }{
+    \today
+  }
+}{
+  \textbf{<<&dept>>}\\
+  Skjernvej 4A\\
+  DK-9220 Aalborg Ø\\
+  \href{http://math.aau.dk}{http://math.aau.dk}
+}{
+  \input{incl/misc/abstract}
+}
+<</projectinfo>>

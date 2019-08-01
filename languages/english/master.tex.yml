@@ -1,0 +1,49 @@
+---
+header:
+  title: "master file for the project"
+  description:
+    - line: "This is the main file in the project, which collects the contents from all the"
+    - line: "input files (text, images, literature databases, etc.)."
+documentclass:
+  description: "The 'book' class is a document class with many flexible options."
+  see: "See"
+  lang: "english"
+variables:
+  description:
+    - line: "Some top level variables that are used to automatically input title, authors,"
+    - line: "etc. in the title page and front page."
+  title: "Project Main Title"
+  subtitle: "Project Subtitle"
+  theme: "Project Theme"
+  degree: "Mathematics"
+  degreealt: "or Mathematics-Economics/Technology"
+  period: "Fall Semester 20XX"
+  author: "Project Author"
+  supervisor: "Project Supervisor"
+preamble:
+  - line: "The preamble, i.e. all the settings and commands that go before actual"
+  - line: "document contents, in this template is handled in the single file aaumath.sty,"
+  - line: "which defines a package that can be loaded here with \\usepackage."
+document:
+  - line: "All contents of the document go between the \\begin and \\end commands for the"
+  - line: "'document' environment."
+frontmatter:
+  - line: "The front matter is not counted in the numbered pages and are instead numbered"
+  - line: "with roman numerals. This consists of, for example, the front page, title"
+  - line: "page, preface, and table of contents."
+mainmatter:
+  - line: "The main matter is were the bulk of your work goes. Pages and headings have"
+  - line: "arabic numbers."
+input:
+  - line: "Input files should be partitioned such that each file corresponds to one"
+  - line: "chapter. The \\include command forces a page break and inserts the contents of"
+  - line: "the input file."
+appendices:
+  - line: "Appendices are included inside an appendices block, which enumerates chapters"
+  - line: "with letters, starting from A, instead of numbers."
+backmatter:
+  - line: "The backmatter is for extra stuff. Headings are not numbered."
+bibliography:
+  - line: "Automatic list of references, based on which references in the literature"
+  - line: "database files were referenced throughout the document."
+---

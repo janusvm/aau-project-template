@@ -1,0 +1,50 @@
+---
+header:
+  title: "packages used in the project"
+  description:
+    - line: "Macros are bundled together in packages, which can be loaded with \\usepackage"
+base:
+  header: "Base packages ----------------------------------------------------------------"
+  fontenc: "support for printing accented characters"
+  inputenc: "support for inputting accented characters"
+  babel: "language specific settings"
+  natbib: "set citation style to use square brackets"
+  hyperref: "insert clickable hyperlinks"
+  xpatch: "macro patching commands"
+math:
+  header: "Math packages ----------------------------------------------------------------"
+  mathtools: "math commands and environments"
+  amssymb: "additional math symbols"
+  amsthm: "theorem environments"
+  bbm: "improved 'blackboard bold' styling"
+  bm: "improved bold faces for math symbols"
+figure:
+  header: "Figure packages --------------------------------------------------------------"
+  xcolor: "font colouring functionality"
+  graphicx: "handling of images"
+  booktabs: "improved tables"
+  caption: "customisation of captions"
+  subcaption: "for grouping figures together"
+  tikz: "drawing vector graphics"
+  algorithm: "algorithm floats"
+  algpseudocode: "pseudocode listings"
+  listings: "source code listings"
+styling:
+  header: "Styling packages -------------------------------------------------------------"
+  microtype: "improve full justification and font kerning"
+  emptypage: "suppress page numbering on empty pages"
+  fancyhdr: "easy customisation of headers and footers"
+  titlesec: "easy customisation of section titles"
+  geometry: "adjust page margins"
+  appendix: "improved appendix control"
+  background: "use background image on front page"
+font:
+  header: "Font packages ----------------------------------------------------------------"
+  fourier: "Adobe Utopia base font"
+  dejavusansmono: "DejaVu Sans Mono for monospace text"
+thirdparty:
+  header: "Bundled 3rd party package ----------------------------------------------------"
+  aautitlepage:
+    - line: "The aautitlepage package consists of modified code from a third party."
+    - line: "See incl/pre/ext/aautitlepage.sty for details"
+---

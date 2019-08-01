@@ -1,0 +1,97 @@
+<<#header>>
+% cmds.tex : <<&title>>
+% ------------------------------------------------------------------------------
+<<#description>>
+% <<&line>>
+<</description>>
+<</header>>
+
+<<#math>>
+% <<&header>>
+\newcommand{\N}{\mathbb{N}}          % <<&natural>>
+\newcommand{\Z}{\mathbb{Z}}          % <<&integer>>
+\newcommand{\Q}{\mathbb{Q}}          % <<&rational>>
+\newcommand{\R}{\mathbb{R}}          % <<&real>>
+\newcommand{\C}{\mathbb{C}}          % <<&complex>>
+\newcommand{\ind}{\mathbbm{1}}       % <<&indicator>>
+\newcommand{\bigO}{\mathcal{O}}      % <<&bigo>>
+\renewcommand{\vec}[1]{\bm{#1}}      % <<&vec>>
+<</math>>
+
+<<#theorems>>
+% <<&header>>
+% http://www.ctex.org/documents/packages/math/amsthdoc.pdf
+\theoremstyle{plain}                 % <<&plainstyle>>
+\newtheorem{thm}{<<&thm.name>>}[chapter]   % <<&thm.desc>>
+\newtheorem{lem}[thm]{<<&lem.name>>}         % <<&lem.desc>>
+\newtheorem{prop}[thm]{<<&prop.name>>}  % <<&prop.desc>>
+\newtheorem*{cor}{<<&cor.name>>}         % <<&cor.desc>>
+
+\theoremstyle{definition}            % <<&defstyle>>
+\newtheorem{defn}[thm]{<<&defn.name>>}   % <<&defn.desc>>
+\newtheorem{exmp}[thm]{<<&exmp.name>>}      % <<&exmp.desc>>
+<</theorems>>
+
+<<#figure>>
+% <<&header>>
+
+<<#imgfig>>
+% imgfig ("image figure")
+% <<&description>>
+% <<&misc.argheader>>:
+<<#arglist>>
+%   * <<&arg>>
+<</arglist>>
+% <<&misc.exampleheader>>:
+<<#examplelist>>
+%   <<&ex>>
+<</examplelist>>
+\newcommand{\imgfig}[3][0.75]{
+  \begin{figure}[htbp]
+    \centering
+    \includegraphics[width=#1\textwidth]{fig/img/#2}
+    \caption{#3}
+    \label{fig:#2}
+  \end{figure}
+}
+<</imgfig>>
+
+<<#dimgfig>>
+% dimgfig ("double image figure")
+% <<&description>>
+% <<&misc.argheader>>:
+<<#arglist>>
+%   * <<&arg>>
+<</arglist>>
+% <<&misc.exampleheader>>:
+<<#examplelist>>
+%   <<&ex>>
+<</examplelist>>
+% <<&endnote>>
+% https://en.wikibooks.org/wiki/LaTeX/Floats,_Figures_and_Captions#Subfloats
+\newcommand{\dimgfig}[5][0.5]{
+  \ifx\dimgleftwidth\undefined
+    \newlength{\dimgleftwidth}
+    \newlength{\dimgrightwidth}
+  \fi
+  \setlength{\dimgleftwidth}{#1\textwidth-0.02\textwidth}
+  \setlength{\dimgrightwidth}{0.96\textwidth-\dimgleftwidth}
+  \begin{figure}[htbp]
+    \centering
+    \begin{minipage}[t]{\dimgleftwidth}
+      \centering
+      \includegraphics[width=\linewidth]{fig/img/#2}
+      \caption{#3}
+      \label{fig:#2}
+    \end{minipage}
+    \hfill
+    \begin{minipage}[t]{\dimgrightwidth}
+      \centering
+      \includegraphics[width=\linewidth]{fig/img/#4}
+      \caption{#5}
+      \label{fig:#4}
+    \end{minipage}
+  \end{figure}
+}
+<</dimgfig>>
+<</figure>>

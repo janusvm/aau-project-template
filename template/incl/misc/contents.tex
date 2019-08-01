@@ -1,0 +1,29 @@
+<<#header>>
+% incl/misc/contents.tex :
+% ------------------------------------------------------------------------------
+<</header>>
+
+<<#pdfbookmark>>
+\pdfbookmark[0]{<<&name>>}{<<&label>>}
+<</pdfbookmark>>
+
+% <<&group>>
+\begingroup
+
+% <<&twoside>>
+\makeatletter
+\@twosidefalse
+\makeatother
+
+% <<&toc>>
+\tableofcontents
+\clearpage
+
+% <<&lists>>
+\let\clearpage\relax
+\listoffigures
+\listoftables
+\listofalgorithms
+\lstlistoflistings
+
+\endgroup

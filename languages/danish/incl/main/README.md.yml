@@ -1,0 +1,10 @@
+---
+intro: "Mappen `incl/main` er til `.tex`-filer med dokumentets hovedindhold."
+file:
+  before: "Hver fil bør starte med"
+  after: "og bør ku indeholde et enkelt kapitel."
+  name: "Kapitelnavn"
+  label: "labelnavn"
+mainmatter:
+  - line: "Kapitelfiler indsættes i dokumentet med `\\include`-kommandoen  _efter_ `\\mainmatter`-kommandoen:"
+---

@@ -1,0 +1,20 @@
+---
+intro: "The `fig/tab` folder is for `.tex` files with code for typesetting **tab**les."
+example:
+  before: "For example, if you have a file named `fig/tab/envirs.tex` with the contents:"
+  after: "then the table can be included in the document with the simple line:"
+  caption: "Common \\LaTeX{} environments and their function"
+  label: "table"
+  tab:
+    environment: "Environment"
+    spacer: ""
+    function: "Function"
+    document: "Document contents"
+    table: "Floating table such as this one"
+    figure: "Floating figure"
+    equation: "Numbered equation"
+    align: "Aligned, multiple equations"
+    itemize: "Bulleted list"
+    enumerate: "Numbered list"
+    description: "Descriptive list"
+---
