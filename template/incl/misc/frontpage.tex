@@ -1,5 +1,7 @@
-% incl/misc/frontpage.tex : document front page
+<<#header>>
+% incl/misc/frontpage.tex : <<&title>>
 % ------------------------------------------------------------------------------
+<</header>>
 
 
 \backgroundsetup{
@@ -11,13 +13,15 @@
   }
 }
 \BgThispage
-\pdfbookmark[0]{Front page}{frontpage}
+<<#pdfbookmark>>
+\pdfbookmark[0]{<<&name>>}{<<&label>>}
+<</pdfbookmark>>
 \begin{titlepage}
   \centering
   \phantom{}
   \vspace{2cm}
 
-  % AAU badge
+  % <<&badge>>
   \begin{minipage}[c]{0.2\paperwidth}
     \centering
     \makebox[0pt]{
@@ -25,7 +29,8 @@
     }
   \end{minipage}
 
-  % Main contents
+<<#main>>
+  % <<&desc>>
   \vspace{4cm}
   {\fontfamily{bch}\selectfont
     \fboxsep0pt\colorbox{white}{
@@ -42,10 +47,11 @@
         \parbox{\textwidth}{\centering\large\projectauthors}
 
         \bigskip
-        {\bfseries\large{\projectnumber} Project, Group \projectgroup, \projectdegree}
+        {\bfseries\large{\projectnumber}<<&project>>, <<&group>> \projectgroup, \projectdegree}
         \vspace{2em}
       \end{minipage}
     }
   }
+<</main>>
 
 \end{titlepage}
