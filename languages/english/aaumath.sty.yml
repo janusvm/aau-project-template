@@ -1,2 +1,7 @@
 ---
+header:
+  title: "preamble package"
+  description:
+    - line: "Collates the preamble files into a single LaTeX package"
+pkgdesc: "LaTeX preamble package for AAU Math"
 ---
