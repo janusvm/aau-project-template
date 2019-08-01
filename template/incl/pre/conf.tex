@@ -1,10 +1,15 @@
-% incl/pre/conf.tex : package configurations
+<<#header>>
+% incl/pre/conf.tex : <<&title>>
 % ------------------------------------------------------------------------------
-% This file includes customisations for setting up the document
+<<#description>>
+% <<&line>>
+<</description>>
+<</header>>
 
 
-% Custom colors ----------------------------------------------------------------
-% Official AAU color palette
+<<#colors>>
+% <<&header>>
+% <<&description>>
 % https://www.design.aau.dk/om-aau-design/Farver/
 \definecolor{AAUblue1}{RGB}{ 33, 26, 82}
 \definecolor{AAUblue2}{RGB}{ 89, 79,191}
@@ -15,21 +20,25 @@
 \definecolor{AAUgreen}{RGB}{157,187, 29}
 \definecolor{AAUteal} {RGB}{ 94,150,149}
 \definecolor{AAUred}  {RGB}{223,103, 82}
+<</colors>>
 
-% Headers and footers ----------------------------------------------------------
+<<#fancyhdr>>
+% <<&header>>
 % http://mirrors.dotsrc.org/ctan/macros/latex/contrib/fancyhdr/fancyhdr.pdf
-\fancyhead{}                            % clear default header fields
-\fancyhead[LE,RO]{Group \projectgroup}  % left on even and right on odd
-\fancyhead[RE]{\leftmark}               % right on even
-\fancyhead[LO]{\rightmark}              % left on odd
-\fancyfoot{}                            % clear default footer fields
-\fancyfoot[CE,CO]{\thepage}             % centered page numbers
-\pagestyle{fancy}                       % activate fancy style
+\fancyhead{}                            % <<&head.clear>>
+\fancyhead[LE,RO]{Group \projectgroup}  % <<&head.lero>>
+\fancyhead[RE]{\leftmark}               % <<&head.re>>
+\fancyhead[LO]{\rightmark}              % <<&head.lo>>
+\fancyfoot{}                            % <<&foot.clear>>
+\fancyfoot[CE,CO]{\thepage}             % <<&foot.ceco>>
+\pagestyle{fancy}                       % <<&style>>
+<</fancyhdr>>
 
-% Section titles ---------------------------------------------------------------
+<<#titlesec>>
+% <<&header>>
 % http://mirrors.dotsrc.org/ctan/macros/latex/contrib/titlesec/titlesec.pdf
 
-% Format chapter title style with a boxed number
+% <<&chapter>>
 \titleformat
 {\chapter}
 [hang]
@@ -38,7 +47,7 @@
 {0.5em}
 {\Huge\bfseries\color{AAUblue1}}
 
-% Format part title styles to be on two lines
+% <<&part>>
 \titleformat
 {\part}
 [display]
@@ -47,27 +56,33 @@
 {0em}
 {}
 
-% Adjust title and TOC settings of the appendix page
+% <&appendix>>
 \let\appendixpagenameold\appendixpagename
 \renewcommand{\appendixpagename}{\color{AAUblue1}\appendixpagenameold}
 \xpatchcmd{\addappheadtotoc}{{chapter}}{{part}}{}{}
+<</titlesec>>
 
-% Figure settings --------------------------------------------------------------
-% Format captions
+<<#figure>>
+% <<&header>>
+% <<&caption>>
 % http://mirrors.dotsrc.org/ctan/macros/latex/contrib/caption/caption-eng.pdf
 \captionsetup{font=it,labelfont=bf}
 
-% Useful TiKZ libraries
+<<#tikz>>
+% <<&libs.desc>>
 % https://tex.stackexchange.com/q/42611
-\usetikzlibrary{arrows.meta}  % customisable arrow tips
-\usetikzlibrary{calc}         % extended coordinate calculations
+\usetikzlibrary{arrows.meta}  % <<&libs.arrows>>
+\usetikzlibrary{calc}         % <<&libs.calc>>
 
-% Predefined TiKZ styles for drawing nodes and edge labels in a graph
+% <<&styles.desc>>
 \tikzstyle{point} = [fill,shape=circle,minimum size=3pt,inner sep=0pt]
 \tikzstyle{edge}  = [fill=white,midway,inner sep=1pt]
+<</tikz>>
+<</figure>>
 
-% Source code style ------------------------------------------------------------
-% Simple styling for Python source code
+<<#srccode>>
+% <<&header>>
+% <<&description>>
 % https://en.wikibooks.org/wiki/LaTeX/Source_Code_Listings
 \lstdefinestyle{custompy}{
   belowcaptionskip=\baselineskip,
@@ -81,16 +96,19 @@
   stringstyle=\color{AAUteal},
 }
 \lstset{language=Python,style=custompy,captionpos=b}
-\renewcommand{\lstlistingname}{Listing}
-\renewcommand{\lstlistlistingname}{List of Listings}
+\renewcommand{\lstlistingname}{<<&lstlistingname>>}
+\renewcommand{\lstlistlistingname}{<<&lstlistlistingname>>}
+<</srccode>>
 
-% Autoref settings -------------------------------------------------------------
+<<#autoref>>
+% <<&header>>
 % https://en.wikibooks.org/wiki/LaTeX/Labels_and_Cross-referencing#autoref
-\def\partautorefname{Part}
-\def\chapterautorefname{Chapter}
-\def\sectionautorefname{Section}
-\def\subsectionautorefname{Subsection}
-\def\figureautorefname{Figure}
-\def\tableautorefname{Table}
-\def\algorithmautorefname{Algorithm}
-\def\lstinputlistingautorefname{Listing}
+\def\partautorefname{<<&part>>}
+\def\chapterautorefname{<<&chapter>>}
+\def\sectionautorefname{<<&section>>}
+\def\subsectionautorefname{<<&subsection>>}
+\def\figureautorefname{<<&figure>>}
+\def\tableautorefname{<<&table>>}
+\def\algorithmautorefname{<<&algorithm>>}
+\def\lstinputlistingautorefname{<<&listing>>}
+<</autoref>>

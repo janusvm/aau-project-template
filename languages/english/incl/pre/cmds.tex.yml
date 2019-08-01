@@ -1,2 +1,65 @@
 ---
+header:
+  title: "custom commands and environments"
+  description:
+    - line: "This file contains definitions for custom commands and environments, used for"
+    - line: "shorthand notation for macros used often in the project"
+math:
+  header: "Mathematical symbols ---------------------------------------------------------"
+  natural: "natural numbers"
+  integer: "integers"
+  rational: "rational numbers"
+  real: "real numbers"
+  complex: "complex numbers"
+  indicator: "indicator function"
+  bigo: "big O"
+  vec: "bold vector style"
+theorems:
+  header: "Theorem enviroments ----------------------------------------------------------"
+  plainstyle: "Bold title, italic body text"
+  defstyle: "Bold title, upright body text"
+  thm:
+    name: "Theorem"
+    desc: "Theorems, numbered by chapter"
+  lem:
+    name: "Lemma"
+    desc: "Lemmas, numbered like theorems"
+  prop:
+    name: "Proposition"
+    desc: "Propositions, numbered like theorems"
+  cor:
+    name: "Corollary"
+    desc: "Corollaries, unnumbered"
+  defn:
+    name: "Definition"
+    desc: "Definitions, numbered like theorems"
+  exmp:
+    name: "Example"
+    desc: "Examples, numbered like theorems"
+figure:
+  header: "Figure commands --------------------------------------------------------------"
+  imgfig:
+    description: "Shortcut command for inserting an image from the fig/img folder"
+    arglist:
+      - arg: "(optional) figure width; percentage of text width (default: 0.75)"
+      - arg: "file name (without fig/img/ and file extension); also used for label"
+      - arg: "the figure caption"
+    examplelist:
+      - ex: "\\imgfig{image-name}{Caption goes here}"
+      - ex: "\\imgfig[0.5]{image-name}{Caption goes here}"
+  dimgfig:
+    description: "Shortcut command for inserting two images side by side"
+    arglist:
+      - arg: "(optional) width split ratio (default: 0.5, i.e. even split)"
+      - arg: "file name for the left figure, without fig/img/ and file extension"
+      - arg: "caption for the left figure"
+      - arg: "file name for the right figure, without fig/img/ and file extension"
+      - arg: "caption for the right figure"
+    examplelist:
+      - ex: "\\dimgfig{img1}{First caption}{img2}{Second caption}"
+      - ex: "\\dimgfig[0.3]{img1}{First caption}{img2}{Second caption}"
+    endnote: "Alteratively, see"
+misc:
+  argheader: "Arguments"
+  exampleheader: "Examples"
 ---

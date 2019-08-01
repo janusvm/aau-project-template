@@ -1,50 +1,67 @@
-% incl/pre/pkgs.tex : packages used in the project
+<<#header>>
+% incl/pre/pkgs.tex : <<&title>>
 % ------------------------------------------------------------------------------
-% Macros are bundled together in packages, which can be loaded with \usepackage
+<<#description>>
+% <<&line>>
+<</description>>
+<</header>>
 
 
-% Base packages ----------------------------------------------------------------
-\usepackage[T1]{fontenc}           % support for printing accented characters
-\usepackage[utf8]{inputenc}        % support for inputting accented characters
-\usepackage{babel}                 % language specific settings
-\usepackage[square]{natbib}        % set citation style to use square brackets
-\usepackage{hyperref}              % insert clickable hyperlinks
-\usepackage{xpatch}                % macro patching commands
+<<#base>>
+% <<&header>>
+\usepackage[T1]{fontenc}           % <<&fontenc>>
+\usepackage[utf8]{inputenc}        % <<&inputenc>>
+\usepackage{babel}                 % <<&babel>>
+\usepackage[square]{natbib}        % <<&natbib>>
+\usepackage{hyperref}              % <<&hyperref>>
+\usepackage{xpatch}                % <<&xpatch>>
+<</base>>
 
-% Math packages ----------------------------------------------------------------
-\usepackage{mathtools}             % math commands and environments
-\usepackage{amssymb}               % additional math symbols
-\usepackage{amsthm}                % theorem environments
-\usepackage{bbm}                   % improved 'blackboard bold' styling
-\usepackage{bm}                    % improved bold faces for math symbols
+<<#math>>
+% <<&header>>
+\usepackage{mathtools}             % <<&mathtools>>
+\usepackage{amssymb}               % <<&amssymb>>
+\usepackage{amsthm}                % <<&amsthm>>
+\usepackage{bbm}                   % <<&bbm>>
+\usepackage{bm}                    % <<&bm>>
+<</math>>
 
-% Figure packages --------------------------------------------------------------
-\usepackage[dvipsnames]{xcolor}    % font colouring functionality
-\usepackage{graphicx}              % handling of images
-\usepackage{booktabs}              % improved tables
-\usepackage{caption}               % customisation of captions
-\usepackage{subcaption}            % for grouping figures together
-\usepackage{tikz}                  % drawing vector graphics
-\usepackage[chapter]{algorithm}    % algorithm floats
-\usepackage[noend]{algpseudocode}  % pseudocode listings
-\usepackage{listings}              % source code listings
+<<#figure>>
+% <<&header>>
+\usepackage[dvipsnames]{xcolor}    % <<&xcolor>>
+\usepackage{graphicx}              % <<&graphicx>>
+\usepackage{booktabs}              % <<&booktabs>>
+\usepackage{caption}               % <<&caption>>
+\usepackage{subcaption}            % <<&subcaption>>
+\usepackage{tikz}                  % <<&tikz>>
+\usepackage[chapter]{algorithm}    % <<&algorithm>>
+\usepackage[noend]{algpseudocode}  % <<&algpseudocode>>
+\usepackage{listings}              % <<&listings>>
+<</figure>>
 
-% Styling packages -------------------------------------------------------------
-\usepackage{microtype}             % improve full justification and font kerning
-\usepackage{emptypage}             % suppress page numbering on empty pages
-\usepackage{fancyhdr}              % easy customisation of headers and footers
-\usepackage{titlesec}              % easy customisation of section titles
-\usepackage[margin=3cm]{geometry}  % adjust page margins
-\usepackage[toc,page]{appendix}    % improved appendix control
-\usepackage[some]{background}      % use background image on front page
+<<#styling>>
+% <<&header>>
+\usepackage{microtype}             % <<&microtype>>
+\usepackage{emptypage}             % <<&emptypage>>
+\usepackage{fancyhdr}              % <<&fancyhdr>>
+\usepackage{titlesec}              % <<&titlesec>>
+\usepackage[margin=3cm]{geometry}  % <<&geometry>>
+\usepackage[toc,page]{appendix}    % <<&appendix>>
+\usepackage[some]{background}      % <<&background>>
+<</styling>>
 
-% Font packages ----------------------------------------------------------------
+<<#font>>
+% <<&header>>
 % http://www.tug.org/pracjourn/2006-1/hartke/hartke.pdf
 % http://www.tug.dk/FontCatalogue/
-\usepackage{fourier}               % Adobe Utopia base font
-\usepackage{DejaVuSansMono}        % DejaVu Sans Mono for monospace text
+\usepackage{fourier}               % <<&fourier>>
+\usepackage{DejaVuSansMono}        % <<&dejavusansmono>>
+<</font>>
 
-% Bundled 3rd party package ----------------------------------------------------
-% The aautitlepage package consists of modified code from a third party.
-% See incl/pre/ext/aautitlepage.sty for details
+<<#thirdparty>>
+% <<&header>>
+<<#aautitlepage>>
+% <<&line>>
+<</aautitlepage>>
 \usepackage{incl/pre/ext/aautitlepage}
+<</thirdparty>>
