@@ -10,7 +10,7 @@ commands:
   description: "To nyttige makroer til figurer er defineret i `incl/pre/cmds.tex`:"
   list:
     imgfig: "for at indsætte et enkelt billede som figur"
-    dimgfig: "for at indsætte two billeder ved siden af hinanden"
+    dimgfig: "for at indsætte to billeder ved siden af hinanden"
 examples:
   header: "Eksempler"
   imgfig:

@@ -1,5 +1,5 @@
 ---
-intro: "Mappen `fig/alg` er til `.tex`-filer med beskrivelser af**alg**oritmer, som laves med `algpseudocode`-pakken."
+intro: "Mappen `fig/alg` er til `.tex`-filer med beskrivelser af **alg**oritmer, som laves med `algpseudocode`-pakken."
 example:
   before: "For eksempel, hvis man har en fil kaldet `fig/alg/bubblesort.tex` med indholdet:"
   after: "så kan algoritmen indsættes i dokumentet med kommandoen:"
