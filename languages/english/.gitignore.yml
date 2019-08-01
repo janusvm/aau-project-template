@@ -1,0 +1,7 @@
+---
+header:
+  title: "files not to keep under version control with git"
+master:
+  - line: "Ignore main PDF document to avoid the most frequent cause of merge conflicts"
+  - line: "at the cost of having to recompile after each git pull"
+---

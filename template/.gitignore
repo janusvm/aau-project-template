@@ -1,5 +1,7 @@
-# .gitignore : files not to keep under version control with git
+<<#header>>
+# .gitignore : <<&title>>
 # ------------------------------------------------------------------------------
+<</header>>
 
 # Created by https://www.gitignore.io/api/latex,python
 # Edit at https://www.gitignore.io/?templates=latex,python
@@ -402,6 +404,7 @@ dmypy.json
 # End of https://www.gitignore.io/api/latex,python
 # ------------------------------------------------------------------------------
 
-# Ignore main PDF document to avoid the most frequent cause of merge conflicts
-# at the cost of having to recompile after each git pull
+<<#master>>
+# <<&line>>
+<</master>>
 master.pdf

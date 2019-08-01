@@ -1,0 +1,9 @@
+---
+header:
+  title: "settings for the Latexmk build system"
+  description:
+    - line: "Latexmk is a Perl script for automatically running all the programs needed"
+    - line: "(pdflatex, bibtex, etc.) for compiling your document. With this configuration"
+    - line: "file, the master PDF is compiled by running `latexmk` in the root folder."
+see: "See"
+---
