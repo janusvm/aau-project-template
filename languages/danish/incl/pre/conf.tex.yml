@@ -21,7 +21,11 @@ titlesec:
   header: "Overskrifter -----------------------------------------------------------------"
   chapter: "Kapitler vises med et tal i en farvet kasse"
   part: "Dele skrives på to linjer"
-  appendix: "Juster titel og indholdsfortegnelsen mht. appendiks-siden"
+appendix:
+  description: "Juster titel og indholdsfortegnelsen mht. appendiks-siden"
+  name: "Appendix"
+  tocname: "Appendicer"
+  pagename: "Appendicer"
 figure:
   header: "Figurindstillinger -----------------------------------------------------------"
   caption: "Indstillinger for figurtekst"
