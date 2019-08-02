@@ -1,4 +1,9 @@
 language: ruby
+dist: bionic
+before_install:
+  - sudo apt-get install -y build-essential
+  - sudo apt-get install -y texlive-font-utils
+  - sudo apt-get install -y ghostscript
 script: make all
 deploy:
   skip_cleanup: true
@@ -6,8 +11,6 @@ deploy:
   script: bash deploy.sh
   on:
     branch: master
-branches:
-  only: master
 env:
   global:
-    secure: NamlV1pHMjE6rFz0v2a3QKuAXfx5OgATV84wqxG+N24WKvOt4b4mDWzPwmMW7uP+I+9MjnX1igXInQviaLv7cLw6yTDgbVafO7NYSI4hozr0ZX2Gc+KJGSC7xUToW9uMvYILZ1w7eujg8YAhpEwTol8Ox2vz2CgTsPFrx0etpTs7RbSeRH1XrZOblqg0528zI/z4RZakSYrxRK2PeWYfZZ88AaqIULwE8zcR2lgZH1J5u4vx/xFrWheWI06sLH85FNuUbNZyG6LEO1/cNVkxrGGXLUkOvLX5fJnBK4djNh3NcL0OGsuuRGFfSeq8wHjbLTV/ipYbHToDdqcbXPDbIqrtsCBAjZsVcc1YqhpZ4hT+K3XVR4bT4Sh31xndOv6kPy5IwHYKAiEYxTs0wQqNDbUGot9k8RcR1A5Qw+eR90JhVcFFcGqCliLujnM0DAaBECF+mVCMdkHXlbWNwxRAKwniecXJIxcT8waNHuF7qbVRpvLyNwfVwRsKq8+ALZesl2e3Q8HGunrg55zFEzl2uV25NqGroNAkrmUy1WZYXbdWpwNwI4qWyj5gD3SPU7IB+oLiWzQ99nI6kMd4DupJdH9bMtkTRaPGQOhLnS3U1/bjM3ieQg3hJWyg0eSZ2uhIoS1junl0rZ/A16T7LDQWjW2bOAqQ9+H4Zh0uY28cesg=
+    secure: Tot/AgiLHELk8TwHn6LjfOK4m0gHApAdgbQQ9IkNBO6oKMdskAdpcZz6709YgQv+VMRF3sYfV7wqCDkNZlAcXF86ram+zPx/dP+Nx5MjPVT15jK0My768ShVnTJtj2HLev1/RoTUtP+IOvCrsRP2/NKJCb2L2TmvvYaHtD0aNrZQGgXTm4t4/xYVw2dL9ub1l1/PKJri8MUniE7P4+H+n9FjzdwI0xmlcBFP4hFiTP7gA9srWEteGCc2rLZGwPRWVjxSlhymGOnfako3icrRnxr2ttEOyvXqJ1FemxI3mwU/5X5b8FNS8hIb38oVuJ+XBDKAnOytzERLXmIVD9Iagudhl3ZDXsrZWYEtVE2O3rcZQJfznN3mp2kK4ScnMewbosAE9i4caFzQ5iLg1UeSGcAzEJN6fA335yqD0YQIntvVBz+YVHHAyTMonyRPKuxonuZs7VYYIh7j6ppHRPrA+yp3DuwPTdbGM7qnYh1ruqNuNtV3PlMntbNkWg8G4yPvONx3vJ45pvqUKFLqdTtS1nzBKoBGi6rPw6U27Y+LcILTkiCEhc2V+13/5BEahLj2Hac+G/LXtsjs7NKP/vQErcvj17ynzzqNwbXGXCe9Jvofla02KN1KzzDG+DIX+YkiiYI+jeWn3ZgdMxe3czLU6DJR/OdIaeyjp3mxHo2ewuk=
