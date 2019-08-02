@@ -2,6 +2,7 @@ language: ruby
 dist: bionic
 before_install:
   - sudo apt-get install -y build-essential
+  - sudo apt-get install -y texlive-font-utils
 script: make all
 deploy:
   skip_cleanup: true
